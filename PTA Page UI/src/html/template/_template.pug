@@ -1,0 +1,32 @@
+//- Variables
+include ../config/_site
+include ../config/_variables
+
+block configuracion
+	-var page = {}
+	-page['link']		= 'index.html'
+	-page['title']		= 'Inicio'
+	-page['descrip']	= 'description'
+	-page['keys']		= 'keywords'
+	-page['lang']		= 'es'
+	-page['responsive']	= true
+	-page['section']	= [ ]
+	-page['libsCss']	= [ ]
+	-page['plugins']	= [ ]
+	-page['js']			= [ ]
+
+	- var path = ''
+		if(page.link !== 'index.html')
+			- path = '../'
+
+doctype html
+html(lang=page.lang)
+	include _head
+
+	body
+		include _header
+
+		block contenido
+
+		include _footer
+		include _scripts

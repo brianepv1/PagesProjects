@@ -1,0 +1,2138 @@
+.grid-overlay {
+    height: 100vh;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000
+}
+@media(min-width: 1440px) {
+    .grid-overlay {
+        left: max(0px, 50% - 864px);
+        max-width: 1728px
+    }
+}
+.grid-overlay .grid {
+    height: 100%
+}
+.grid-overlay .grid__col {
+    grid-column-start: span 1;
+    background-color: rgba(0, 255, 255, .125);
+    box-shadow: none !important;
+    color: #000;
+    font-size: 12px;
+    font-weight: 800;
+    height: 100%;
+    padding-top: 12px;
+    text-align: center
+}
+@media(max-width: 767px) {
+    .grid-overlay .grid__col:nth-child(5), 
+    .grid-overlay .grid__col:nth-child(6), 
+    .grid-overlay .grid__col:nth-child(7), 
+    .grid-overlay .grid__col:nth-child(8), 
+    .grid-overlay .grid__col:nth-child(9), 
+    .grid-overlay .grid__col:nth-child(10), 
+    .grid-overlay .grid__col:nth-child(11), 
+    .grid-overlay .grid__col:nth-child(12) {
+        display: none
+    }
+}
+.ContainerBlock {
+    background: var(--background, transparent);
+    color: var(--textColor, inherit);
+    position: relative
+}
+@media(max-width: 1023px) {
+    .ContainerBlock {
+        border-radius: 10px;
+        margin: 24px 0;
+        padding: 20px 16px
+    }
+}
+@media(min-width: 1024px) {
+    .ContainerBlock {
+        border-radius: 20px;
+        margin: 24px 0;
+        padding: 24px
+    }
+}
+.ContainerBlock__headline {
+    display: flex;
+    align-items: center
+}
+.ContainerBlock__headline__icon {
+    margin-right: 12px
+}
+.ContainerBlock__headline__icon img {
+    display: block;
+    width: 50px;
+    line-height: 40px;
+    margin-top: 0
+}
+.ContainerBlock__body a {
+    color: var(--linkColor, inherit)
+}
+@media(max-width: 767px) {
+    .blogPost__post__blocks>.block--ContainerBlock>.ContainerBlock {
+        margin-left: -16px;
+        margin-right: -16px;
+        border-radius: 0
+    }
+}
+.CopyBlock {
+    position: relative
+}
+.CountrySpecificBlock {
+    position: relative
+}
+@media(max-width: 1023px) {
+    .EventBonusesBlock__bonuses {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px
+    }
+}
+@media(min-width: 1024px) {
+    .EventBonusesBlock__bonuses {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        row-gap: 20px
+    }
+}
+.EventBonusesBlock__bonus {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    align-items: center
+}
+.EventBonusesBlock__bonus__icon {
+    width: 30px;
+    flex-shrink: 0
+}
+.EventBonusesBlock__bonus__icon img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+.GBLScheduleBlock__schedule {
+    max-width: 520px;
+    margin-top: 40px
+}
+@media(min-width: 768px) {
+    .GBLScheduleBlock__schedule {
+        padding-left: 20px
+    }
+}
+.GBLScheduleBlock__schedule__item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    row-gap: 12px
+}
+.GBLScheduleBlock__schedule__item+.GBLScheduleBlock__schedule__item {
+    margin-top: 12px
+}
+.GBLScheduleBlock__schedule__item__header {
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: linear-gradient(140deg, #8d67b9 0%, #c87fd0 50%, #B668c4 75%);
+    background-size: 100% 100%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative
+}
+.GBLScheduleBlock__schedule__item__header__icon {
+    position: absolute;
+    right: 4px;
+    top: calc(50% - 12px);
+    transform: rotate(90deg)
+}
+.GBLScheduleBlock__schedule__item__header__icon svg {
+    fill: #fff;
+    display: block
+}
+.GBLScheduleBlock__schedule__item__league {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-column-gap: 8px
+}
+.GBLScheduleBlock__schedule__item__footer {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 8px
+}
+.GBLScheduleBlock__schedule__item__statusIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.GBLScheduleBlock__schedule__item__statusIcon__active {
+    width: 24px;
+    height: 24px;
+    display: none
+}
+.GBLScheduleBlock__schedule__item__statusIcon__inactive {
+    width: 16px;
+    height: 16px;
+    display: block
+}
+.GBLScheduleBlock__schedule__item__statusLine {
+    position: relative
+}
+.GBLScheduleBlock__schedule__item__statusLine::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: calc(50% - 1px);
+    border-left: 2px dashed #62c9ac
+}
+.GBLScheduleBlock__schedule__item:last-child .GBLScheduleBlock__schedule__item__statusLine::after {
+    display: none
+}
+.GBLScheduleBlock__schedule__item.collapsed .GBLScheduleBlock__schedule__item__content,
+.GBLScheduleBlock__schedule__item.collapsed .GBLScheduleBlock__schedule__item__statusLine {
+    display: none
+}
+.GBLScheduleBlock__schedule__item.collapsed .GBLScheduleBlock__schedule__item__header__icon {
+    transform: rotate(0deg)
+}
+.GBLScheduleBlock__schedule__item.active .GBLScheduleBlock__schedule__item__statusIcon__active {
+    display: block
+}
+.GBLScheduleBlock__schedule__item.active .GBLScheduleBlock__schedule__item__statusIcon__inactive {
+    display: none
+}
+.GBLScheduleBlock__schedule__item.active .GBLScheduleBlock__schedule__item__statusLine::after {
+    top: -8px
+}
+.GBLScheduleBlock__schedule__item.past .GBLScheduleBlock__schedule__item__header {
+    background: #a0a0a0
+}
+.IconFootnotesBlock {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: 20px
+}
+.IconFootnotesBlock__footnote {
+    display: flex;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    align-items: center
+}
+.IconFootnotesBlock__footnote__icon {
+    width: 24px
+}
+.IconFootnotesBlock__footnote__icon img {
+    display: block
+}
+.IconFootnotesBlock__footnote__body {
+    font-size: 14px;
+    line-height: 1.2
+}
+.IconFootnotesBlock__footnote__body--md>*:first-child {
+    margin-top: 0
+}
+.IconFootnotesBlock__footnote__body--md>*:last-child {
+    margin-bottom: 0
+}
+.ImageBlock--mobile-only {
+    display: none
+}
+@media(max-width: 767px) {
+    .ImageBlock--mobile-only {
+        display: block
+    }
+}
+.ImageBlock--desktop-only {
+    display: none
+}
+@media(min-width: 768px) {
+    .ImageBlock--desktop-only {
+        display: block
+    }
+}
+.ImageBlock img {
+    display: block;
+    max-width: 100%;
+    width: 100%
+}
+.ImageGridBlock {
+    position: relative
+}
+.MarkdownBlock {
+    margin-top: 20px
+}
+.MarkdownBlock__content>*:first-child {
+    margin-top: 0
+}
+.MarkdownBlock--rounded-gbl-purple-bg {
+    background: linear-gradient(140deg, #8d67b9 0%, #c87fd0 50%, #B668c4 75%);
+    background-size: 100% 100%;
+    color: #fff;
+    position: relative
+}
+@media(max-width: 767px) {
+    .MarkdownBlock--rounded-gbl-purple-bg {
+        padding: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-radius: 20px
+    }
+}
+@media(min-width: 768px) {
+    .MarkdownBlock--rounded-gbl-purple-bg {
+        padding: 30px;
+        border-radius: 30px
+    }
+}
+.MarkdownBlock--rounded-gbl-purple-bg .MarkdownBlock__content,
+.MarkdownBlock--rounded-gbl-purple-bg .MarkdownBlock__blocks {
+    position: relative;
+    z-index: 1
+}
+.MarkdownBlock--rounded-gbl-purple-bg>.MarkdownBlock__content p {
+    font-weight: 600
+}
+.MarkdownBlock--rounded-gbl-purple-bg>.MarkdownBlock__content a {
+    color: #fff
+}
+.MarkdownBlock--rounded-light-grey-bg {
+    color: #266378;
+    background-color: #f9f8f3
+}
+@media(max-width: 767px) {
+    .MarkdownBlock--rounded-light-grey-bg {
+        border-radius: 20px;
+        padding: 20px
+    }
+}
+@media(min-width: 768px) {
+    .MarkdownBlock--rounded-light-grey-bg {
+        border-radius: 30px;
+        padding: 30px
+    }
+}
+.MischiefBlock__banner1 {
+    background: #370172
+}
+@media(max-width: 767px) {
+    .MischiefBlock__banner1 {
+        padding: 40px 30px;
+        margin-left: -30px;
+        margin-right: -30px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__banner1 {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        padding: 40px;
+        align-items: center
+    }
+}
+@media(min-width: 1024px) {
+    .MischiefBlock__banner1 {
+        grid-template-columns: 250px 1fr;
+        -moz-column-gap: 40px;
+        column-gap: 40px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__banner1__image {
+        max-width: 250px;
+        margin: 0 auto 40px
+    }
+}
+.MischiefBlock__banner1__image img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: auto
+}
+@media(min-width: 768px) {
+    .MischiefBlock__banner1__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: right
+    }
+}
+.MischiefBlock__banner1__title,
+.MischiefBlock__banner1__body {
+    color: #fff;
+    max-width: 500px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events {
+        padding: 40px 0
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events {
+        padding: 40px
+    }
+}
+.MischiefBlock__events__calendar {
+    display: flex;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center
+}
+.MischiefBlock__events__calendar__month {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__calendar__month {
+        width: 100%
+    }
+}
+.MischiefBlock__events__calendar__month__title {
+    padding: 4px 24px;
+    background: #370172;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 25px
+}
+.MischiefBlock__events__calendar__month__events {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    flex: 1;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    justify-content: center
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__calendar__month__events {
+        display: grid;
+        grid-template-columns: auto auto
+    }
+}
+.MischiefBlock__events__calendar__month__event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end
+}
+.MischiefBlock__events__calendar__month__event__day {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 12px
+}
+.MischiefBlock__events__calendar__month__event__name {
+    display: block;
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    color: #370172;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 10px;
+    line-height: 1.1;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: all .3s ease
+}
+.MischiefBlock__events__calendar__month__event.isLive .MischiefBlock__events__calendar__month__event__name {
+    border: 2px solid #370172
+}
+a.MischiefBlock__events__calendar__month__event__name {
+    box-shadow: 0px 1px 4px rgba(66, 63, 63, .15)
+}
+a.MischiefBlock__events__calendar__month__event__name:hover {
+    box-shadow: 0px 1px 5px rgba(66, 63, 63, .3)
+}
+.MischiefBlock__events__calendar__month__event__name:empty {
+    background-image: url(https://lh3.googleusercontent.com/i9U-K0JmgT6c_eBoyyPxr51M3zHeUydSc-zpR27_sHM8sOOwYY3iXqMvfNFi7XRl_m1ehOLtgFzq9_TvN8c143Dk9YmXLWi_DfOcdHQEBOeggQ=s0);
+    background-color: rgba(0, 0, 0, 0);
+    background-size: contain;
+    cursor: default
+}
+.MischiefBlock__events__calendar__month__event__arrow {
+    visibility: hidden
+}
+.MischiefBlock__events__calendar__month__event.isLive .MischiefBlock__events__calendar__month__event__arrow {
+    visibility: visible
+}
+.MischiefBlock__events__calendar__month__event__arrow svg {
+    fill: #370172;
+    width: 36px;
+    height: 36px;
+    transform: rotate(-90deg)
+}
+.MischiefBlock__events__details {
+    margin-top: 40px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details {
+        margin-left: -30px;
+        margin-right: -30px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details {
+        margin-left: -40px;
+        margin-right: -40px
+    }
+}
+.MischiefBlock__events__details summary {
+    background-color: #a0a0a0;
+    color: #fff;
+    padding: 20px 40px;
+    cursor: pointer;
+    font-weight: 900;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 20px;
+    line-height: 1.2
+}
+.MischiefBlock__events__details details[open] summary {
+    background-color: #370172;
+    color: #fff;
+    cursor: default;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+    font-size: 30px
+}
+.MischiefBlock__events__details__content {
+    background-color: #370172;
+    color: #fff
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__content {
+        padding: 0 30px 40px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__content {
+        padding: 0 40px 40px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event1__content {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event1__content {
+        display: grid;
+        grid-template-columns: 1fr 182px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event1__content__image {
+        max-width: 250px;
+        margin: 0 auto 40px
+    }
+}
+.MischiefBlock__events__details__event1__content__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event2__intro {
+        display: flex;
+        flex-direction: column-reverse;
+        -moz-column-gap: 40px;
+        column-gap: 40px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event2__intro {
+        display: grid;
+        grid-template-columns: 1fr 256px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event2__intro__image {
+        max-width: 200px;
+        margin: 0 auto 40px
+    }
+}
+.MischiefBlock__events__details__event2__intro__image img {
+    display: block;
+    height: auto
+}
+.MischiefBlock__events__details__event2__encounterTimesWrap {
+    margin-top: 40px
+}
+.MischiefBlock__events__details__event2__encounterTimes {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    row-gap: 4px;
+    margin: 20px 0 40px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event2__encounterTimes {
+        grid-template-columns: 1fr
+    }
+}
+.MischiefBlock__events__details__event2__encounterTime {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event2__encounterTime:nth-child(2) {
+        grid-column: 1/span 1;
+        grid-row: 2/span 1
+    }
+    .MischiefBlock__events__details__event2__encounterTime:nth-child(3) {
+        grid-column: 1/span 1;
+        grid-row: 3/span 1
+    }
+    .MischiefBlock__events__details__event2__encounterTime:nth-child(4) {
+        grid-column: 2/span 1;
+        grid-row: 1/span 1
+    }
+    .MischiefBlock__events__details__event2__encounterTime:nth-child(5) {
+        grid-column: 2/span 1;
+        grid-row: 2/span 1
+    }
+    .MischiefBlock__events__details__event2__encounterTime:nth-child(6) {
+        grid-column: 2/span 1;
+        grid-row: 3/span 1
+    }
+}
+.MischiefBlock__events__details__event2__encounterTime__icons {
+    display: flex;
+    width: 38px;
+    -moz-column-gap: 2px;
+    column-gap: 2px
+}
+.MischiefBlock__events__details__event2__encounterTime__icons img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-left: auto
+}
+.MischiefBlock__events__details__event2__encounters__title {
+    margin-bottom: 40px !important
+}
+@media(max-width: 1439px) {
+    .MischiefBlock__events__details__event2__encounters__slots {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px
+    }
+}
+@media(min-width: 1440px) {
+    .MischiefBlock__events__details__event2__encounters__slots {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        max-width: 750px;
+        margin: 0 auto
+    }
+}
+.MischiefBlock__events__details__event2__encounters__slot__title {
+    display: flex;
+    -moz-column-gap: 4px;
+    column-gap: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event2__encounters__slot__title {
+        justify-content: flex-start;
+        align-items: flex-start
+    }
+}
+.MischiefBlock__events__details__event2__encounters__slot__title span {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.2
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event2__encounters__slot__title span {
+        font-size: 18px
+    }
+}
+.MischiefBlock__events__details__event2__encounters__slot__title img {
+    width: 18px;
+    height: 18px;
+    display: block
+}
+.MischiefBlock__events__details__event2__encounters__slot__pokemons {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 350px;
+    margin: 0 auto
+}
+.MischiefBlock__events__details__event2__encounters__slot__more {
+    text-align: center;
+    margin-top: 12px
+}
+.MischiefBlock__events__details__event2__bonuses {
+    margin-top: 40px
+}
+.MischiefBlock__events__details__event3__content__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    padding: 40px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event3__content__images {
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        padding: 20px 0
+    }
+}
+.MischiefBlock__events__details__event3__content__images img {
+    display: block;
+    height: auto
+}
+.MischiefBlock__events__details__event3__content__body a {
+    color: #fff
+}
+.MischiefBlock__events__details__event3.inview .MischiefBlock__events__details__event3__content__image--inkay {
+    transform: rotate(0);
+    transition: transform 1s ease
+}
+.MischiefBlock__events__details__event3.in .MischiefBlock__events__details__event3__content__image--inkay {
+    transform: rotate(180deg)
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event4__content {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event4__content {
+        display: grid;
+        grid-template-columns: 1fr 224px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+.MischiefBlock__events__details__event4__content a {
+    color: #fff
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event4__content__image {
+        max-width: 160px;
+        margin: 20px auto 40px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event4__content__image {
+        padding: 0 40px
+    }
+}
+.MischiefBlock__events__details__event4__content__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event5__content {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event5__content {
+        display: grid;
+        grid-template-columns: 1fr 224px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+.MischiefBlock__events__details__event5__content a {
+    color: #fff
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event5__content__image {
+        max-width: 160px;
+        margin: 20px auto 40px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event5__content__image {
+        padding: 0 40px
+    }
+}
+.MischiefBlock__events__details__event5__content__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 1023px) {
+    .MischiefBlock__events__details__event6__content {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+@media(min-width: 1024px) {
+    .MischiefBlock__events__details__event6__content {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+.MischiefBlock__events__details__event6__content a {
+    color: #fff
+}
+.MischiefBlock__events__details__event6__content p:first-child {
+    margin-top: 0
+}
+@media(max-width: 1023px) {
+    .MischiefBlock__events__details__event6__content__image {
+        max-width: 320px;
+        margin: 20px auto 40px
+    }
+}
+.MischiefBlock__events__details__event6__content__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event7__content {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event7__content {
+        display: grid;
+        grid-template-columns: 1fr 224px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+.MischiefBlock__events__details__event7__content a {
+    color: #fff
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event7__content__image {
+        max-width: 240px;
+        margin: 0 auto
+    }
+}
+.MischiefBlock__events__details__event7__content__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event8__content {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__events__details__event8__content {
+        display: grid;
+        grid-template-columns: 1fr 224px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+.MischiefBlock__events__details__event8__content a {
+    color: #fff
+}
+@media(max-width: 767px) {
+    .MischiefBlock__events__details__event8__content__image {
+        max-width: 240px;
+        margin: 0 auto
+    }
+}
+.MischiefBlock__events__details__event8__content__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__banner2 {
+        padding-bottom: 40px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__banner2 {
+        padding: 0 40px 40px 40px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__banner2__title {
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 900
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__banner2__title {
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 1.2
+    }
+}
+.MischiefBlock__banner3 {
+    background-color: #370172
+}
+@media(max-width: 767px) {
+    .MischiefBlock__banner3 {
+        margin-left: -30px;
+        margin-right: -30px;
+        padding: 40px 30px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__banner3 {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        align-items: center;
+        padding: 40px
+    }
+}
+@media(min-width: 1024px) {
+    .MischiefBlock__banner3 {
+        grid-template-columns: 1fr 300px;
+        -moz-column-gap: 40px;
+        column-gap: 40px
+    }
+}
+.MischiefBlock__banner3__image img {
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__banner3__image img {
+        max-width: 300px;
+        margin: 0 auto
+    }
+}
+.MischiefBlock__banner3__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+.MischiefBlock__banner3__title,
+.MischiefBlock__banner3__body {
+    color: #fff;
+    max-width: 500px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__encounters {
+        padding: 40px 0
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__encounters {
+        padding: 40px
+    }
+}
+.MischiefBlock__encounters__content {
+    margin-bottom: 40px
+}
+.MischiefBlock__encounters__locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__encounters__location {
+        display: flex;
+        flex-direction: column
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__encounters__location {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        max-width: 370px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__encounters__location__icon {
+        width: 70px;
+        margin: 0 auto
+    }
+}
+.MischiefBlock__encounters__location__icon img {
+    display: block;
+    height: auto
+}
+.MischiefBlock__encounters__location__pokemons {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    justify-content: space-between;
+    position: relative
+}
+@media(max-width: 767px) {
+    .MischiefBlock__encounters__location__pokemons {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 12px
+    }
+}
+.MischiefBlock__pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 64px;
+    min-width: 64px
+}
+.MischiefBlock__pokemon img {
+    position: relative;
+    z-index: 1
+}
+.MischiefBlock__pokemon::after {
+    background-image: url(https://lh3.googleusercontent.com/gzZC54BbvI6Z-tUCUYo9B8ZVXTOxQVbWLXS568UsYQEOb6XJpL8xuhdaAmxOflnWMpqT47F_2SeQ7-oAx44TEQEQ63zHeerofMivU3uYfR4x=s0);
+    background-size: 56px 56px;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .7
+}
+.MischiefBlock__pokemon--lg {
+    min-height: 130px;
+    min-width: 130px
+}
+.MischiefBlock__pokemon--lg::after {
+    background-size: 120px 120px
+}
+.MischiefBlock__pokemon--xl {
+    min-height: 180px;
+    min-width: 180px
+}
+.MischiefBlock__pokemon--xl::after {
+    background-size: 170px 170px
+}
+.MischiefBlock__pokemon--purple::after {
+    opacity: .7
+}
+.MischiefBlock__encounters__location__more {
+    font-size: 16px;
+    line-height: 1;
+    white-space: nowrap;
+    align-self: center
+}
+.MischiefBlock__encounters__regions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 60px
+}
+.MischiefBlock__encounters__region__pokemons {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px
+}
+.MischiefBlock__hatch {
+    background: #370172;
+    color: #fff
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch {
+        padding: 40px 30px;
+        margin-left: -30px;
+        margin-right: -30px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch {
+        padding: 40px
+    }
+}
+.MischiefBlock__hatch__content {
+    margin-bottom: 40px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__eggs {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 24px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__egg {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 12px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__egg {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+.MischiefBlock__hatch__egg__icon {
+    width: 88px
+}
+.MischiefBlock__hatch__egg__icon img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__egg__pokemons {
+        display: grid;
+        grid-template-columns: auto auto;
+        -moz-column-gap: 12px;
+        column-gap: 12px;
+        row-gap: 12px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__egg__pokemons {
+        display: flex;
+        -moz-column-gap: 12px;
+        column-gap: 12px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__egg__pokemonsMore {
+        grid-column-start: span 2;
+        text-align: center
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__egg__pokemonsMore {
+        align-self: center
+    }
+}
+.MischiefBlock__hatch__adventureSync {
+    margin-top: 40px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__adventureSync__eggs {
+        display: grid;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 24px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__adventureSync__egg {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 12px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__adventureSync__egg {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center
+    }
+}
+.MischiefBlock__hatch__adventureSync__egg__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__adventureSync__egg__icon {
+        -moz-column-gap: 12px;
+        column-gap: 12px
+    }
+}
+.MischiefBlock__hatch__adventureSync__egg__icon img {
+    display: block;
+    height: auto
+}
+.MischiefBlock__hatch__adventureSync__egg__icon img:nth-child(1) {
+    width: 44px
+}
+.MischiefBlock__hatch__adventureSync__egg__icon img:nth-child(2) {
+    width: 88px
+}
+.MischiefBlock__hatch__adventureSync__egg__pokemons {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__adventureSync__egg__pokemons {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 12px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__adventureSync__egg__pokemons {
+        padding-left: 24px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__hatch__adventureSync__egg__pokemonsMore {
+        grid-column-start: span 2;
+        text-align: center
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__hatch__adventureSync__egg__pokemonsMore {
+        align-self: center
+    }
+}
+.MischiefBlock__hatch__centerWrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+@media(max-width: 767px) {
+    .MischiefBlock__mega {
+        padding: 40px 0
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__mega {
+        padding: 40px
+    }
+}
+.MischiefBlock__mega__pokemons {
+    margin-top: 40px
+}
+@media(max-width: 767px) {
+    .MischiefBlock__mega__pokemons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__mega__pokemons {
+        display: flex;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        justify-content: center
+    }
+}
+.MischiefBlock__mega__pokemonWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px
+}
+.MischiefBlock__mega__pokemonMonth {
+    padding: 4px 24px;
+    background: #370172;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 25px
+}
+.MischiefBlock__ditto {
+    background: #370172;
+    color: #fff;
+    position: relative
+}
+@media(max-width: 767px) {
+    .MischiefBlock__ditto {
+        padding: 40px 30px;
+        margin-left: -30px;
+        margin-right: -30px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__ditto {
+        padding: 40px
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__ditto__header {
+        display: grid;
+        grid-template-columns: 1fr 170px;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+@media(min-width: 1024px) {
+    .MischiefBlock__ditto__header {
+        grid-template-columns: 1fr 227px;
+        -moz-column-gap: 36px;
+        column-gap: 36px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__ditto__image {
+        max-width: 200px;
+        margin: 40px auto
+    }
+}
+.MischiefBlock__ditto__image img {
+    display: block;
+    height: auto
+}
+@media(max-width: 767px) {
+    .MischiefBlock__ditto__pokemons {
+        display: grid;
+        grid-template-columns: auto auto;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        row-gap: 24px;
+        justify-content: center
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__ditto__pokemons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        row-gap: 24px;
+        margin-top: 40px
+    }
+}
+@media(max-width: 767px) {
+    .MischiefBlock__bonuses {
+        padding: 40px 0
+    }
+}
+@media(min-width: 768px) {
+    .MischiefBlock__bonuses {
+        padding: 40px
+    }
+}
+.MischiefBlock__bonuses__content {
+    margin-bottom: 40px
+}
+.MischiefBlock__bonuses__bonuses {
+    display: grid;
+    row-gap: 12px
+}
+@media(min-width: 1024px) {
+    .MischiefBlock__bonuses__bonuses {
+        grid-template-columns: 1fr 1fr;
+        -moz-column-gap: 24px;
+        column-gap: 24px;
+        align-items: center
+    }
+}
+.MischiefBlock__bonuses__bonus {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    align-items: center
+}
+@media(min-width: 1024px) {
+    .MischiefBlock__bonuses__bonus:nth-child(2) {
+        grid-row: 2/span 1
+    }
+    .MischiefBlock__bonuses__bonus:nth-child(3) {
+        grid-row: 3/span 1
+    }
+    .MischiefBlock__bonuses__bonus:nth-child(4) {
+        grid-row: 4/span 1
+    }
+}
+.MischiefBlock__bonuses__bonus__icon img {
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: auto
+}
+.MischiefBlock__bonuses__bonus:nth-child(1) .MischiefBlock__bonuses__bonus__icon {
+    padding: 5px
+}
+.PokemonImageGridBlock {
+    margin-top: 40px
+}
+.PokemonImageGridBlock__grid {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    row-gap: 24px;
+    margin-top: 20px;
+    justify-content: center
+}
+.PokemonImageGridBlock__label {
+    font-size: 18px;
+    font-weight: 900
+}
+.PokemonImageGridBlock__label--withIcon {
+    display: inline-flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    align-items: center;
+    padding: 4px 20px;
+    border-radius: 4px;
+    background: var(--textColor);
+    color: var(--background)
+}
+.PokemonImageGridBlock__label--withIcon img {
+    width: 30px;
+    height: auto
+}
+@media(max-width: 767px) {
+    .PokemonImageGridBlock__grid__pokemon {
+        width: 90px
+    }
+}
+@media(min-width: 768px)and (max-width: 1023px) {
+    .PokemonImageGridBlock__grid__pokemon {
+        width: 100px
+    }
+}
+@media(min-width: 1024px) {
+    .PokemonImageGridBlock__grid__pokemon {
+        width: 120px
+    }
+}
+.PokemonImageGridBlock__grid__pokemon.caption-only {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+.PokemonImageGridBlock__grid__pokemon__image img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+.PokemonImageGridBlock__grid__pokemon__caption {
+    text-align: center
+}
+.PokemonImageGridBlock__labelHeader {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    align-items: center
+}
+.PokemonImageGridBlock__labelHeader img {
+    height: 36px;
+    width: auto
+}
+.PokemonImageGridBlock__eggRarity {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    -moz-column-gap: 4px;
+    column-gap: 4px
+}
+.PokemonImageGridBlock__eggRarity::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    height: 2px;
+    background: var(--textColor)
+}
+.PokemonImageGridBlock__eggRarity__inner {
+    background: var(--background);
+    padding: 0 4px;
+    display: flex;
+    -moz-column-gap: 2px;
+    column-gap: 2px;
+    z-index: 1;
+    position: relative
+}
+.PokemonImageGridBlock__eggRarity__egg {
+    -webkit-mask: url(https://lh3.googleusercontent.com/q2QBzJhbGULR9ptlwLtZNgaExXQl5ITaAk8jb_EPFs_HQWca0ebK_g05UCRnmvt7aPkHYpGsUk2iudh9xetMXld1WcZCNKEjJ-xmE1ahu4pc=s0) center/contain;
+    mask: url(https://lh3.googleusercontent.com/q2QBzJhbGULR9ptlwLtZNgaExXQl5ITaAk8jb_EPFs_HQWca0ebK_g05UCRnmvt7aPkHYpGsUk2iudh9xetMXld1WcZCNKEjJ-xmE1ahu4pc=s0) center/contain;
+    width: 24px;
+    height: 24px;
+    background: var(--textColor)
+}
+@media(max-width: 767px) {
+    .PokemonMovesetBlock {
+        display: block
+    }
+}
+@media(min-width: 768px) {
+    .PokemonMovesetBlock {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        -moz-column-gap: 12px;
+        column-gap: 12px;
+        align-items: center
+    }
+}
+@media(max-width: 767px) {
+    .PokemonMovesetBlock__image {
+        margin: 0 auto 20px;
+        max-width: 150px
+    }
+}
+.PokemonMovesetBlock__image img {
+    display: block
+}
+.PokemonMovesetBlock__pokemonName {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2
+}
+.PokemonMovesetBlock__move {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    align-items: center;
+    margin-top: 12px
+}
+.PokemonMovesetBlock__move__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%
+}
+.block--StickyTOCBlock {
+    padding: 12px 0 0 !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 50;
+    background: #f9f8f3
+}
+@media(max-width: 767px) {
+    .block--StickyTOCBlock {
+        margin-left: -16px;
+        margin-right: -16px
+    }
+}
+.StickyTOCBlock {
+    display: flex;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    padding-bottom: 12px;
+    background: #fffdf5
+}
+@media(max-width: 767px) {
+    .StickyTOCBlock {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: auto
+    }
+}
+@media(min-width: 768px) {
+    .StickyTOCBlock {
+        overflow: hidden;
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        padding-left: 30px;
+        padding-right: 30px
+    }
+}
+.StickyTOCBlock__item {
+    border-radius: 10px;
+    text-decoration: none !important;
+    background: #dedede;
+    color: #236176;
+    padding: 10px 20px;
+    text-align: center
+}
+@media(max-width: 767px) {
+    .StickyTOCBlock__item {
+        min-width: 120px;
+        flex-shrink: 0
+    }
+}
+@media(min-width: 768px) {
+    .StickyTOCBlock__item {
+        flex: 1
+    }
+}
+.StickyTOCBlock__item.active {
+    background: linear-gradient(159deg, #45558D 38.77%, rgba(198, 179, 202, 0) 227.12%), #13213b;
+    color: #fff
+}
+.StickyTOCBlock__item__title {
+    font-size: 16px;
+    line-height: 1.2
+}
+@media(max-width: 767px) {
+    .StickyTOCBlock__item__title {
+        font-size: 16px
+    }
+}
+@media(min-width: 768px) {
+    .StickyTOCBlock__item__title {
+        font-size: 18px
+    }
+}
+.StickyTOCBlock__item__body {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top: 8px
+}
+.StickyTOCBlock__item__body p {
+    margin-top: 0;
+    margin-bottom: 0
+}
+.post--halloween-2021 .StickyTOCBlock__item:nth-child(1).active {
+    background: linear-gradient(159deg, #45558D 38.77%, rgba(198, 179, 202, 0) 227.12%), #13213b
+}
+.post--halloween-2021 .StickyTOCBlock__item:nth-child(2).active {
+    background: #873d8a
+}
+.post--halloween-2021 .StickyTOCBlock__item:nth-child(3).active {
+    background: #94728c
+}
+.post--festival-of-lights-2021 .StickyTOCBlock__item:nth-child(1).active {
+    background: #e05a36
+}
+.post--festival-of-lights-2021 .StickyTOCBlock__item:nth-child(2).active {
+    background: #a93838
+}
+.post--festival-of-lights-2021 .StickyTOCBlock__item:nth-child(3).active {
+    background: #edaf00
+}
+.TitleWithGifBlock {
+    position: relative
+}
+.TitleWithIconBlock {
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    align-items: center
+}
+.TitleWithIconBlock__icon img {
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    width: 125px;
+    height: 125px
+}
+.VideoBlock {
+    width: 100%;
+    margin: 20px auto
+}
+.VideoBlock video {
+    display: block;
+    width: 100%
+}
+.YouTubeBlock {
+    margin: 20px 0;
+    position: relative;
+    aspect-ratio: 16/9
+}
+.YouTubeBlock iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none
+}
+.CommunityDayMapBlock {
+    position: relative;
+    margin: 40px 0
+}
+.TimedDeployBlock {
+    position: relative
+}
+.ImageTransitionOnScrollHero {
+    position: relative
+}
+.ImageTransitionOnScrollHero img {
+    height: auto
+}
+.ImageTransitionOnScrollHero__fgImages {
+    display: flex;
+    position: relative;
+    z-index: 1
+}
+@media(max-width: 1023px) {
+    .ImageTransitionOnScrollHero__fgImages {
+        padding: 20px;
+        -moz-column-gap: 12px;
+        column-gap: 12px
+    }
+}
+@media(min-width: 1024px) {
+    .ImageTransitionOnScrollHero__fgImages {
+        padding: 40px 80px;
+        -moz-column-gap: 40px;
+        column-gap: 40px
+    }
+}
+.ImageTransitionOnScrollHero__fgImageWrap {
+    display: grid;
+    align-items: center
+}
+.ImageTransitionOnScrollHero__fgImage {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    position: relative;
+    transition: all 1s ease;
+    opacity: 0
+}
+.ImageTransitionOnScrollHero__bgImages {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+.ImageTransitionOnScrollHero__bgImage {
+    width: 100%;
+    height: 100%
+}
+.ImageTransitionOnScrollHero__bgImage img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+.ImageTransitionOnScrollHero--roll .ImageTransitionOnScrollHero__fgImageWrap--0 .ImageTransitionOnScrollHero__fgImage {
+    transform: scale(0) rotate(-180deg)
+}
+.ImageTransitionOnScrollHero--roll .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage {
+    transform: scale(0) rotate(180deg)
+}
+.ImageTransitionOnScrollHero--roll.ready .ImageTransitionOnScrollHero__fgImage--before {
+    transform: scale(1) rotate(0);
+    opacity: 1
+}
+.ImageTransitionOnScrollHero--roll.animate .ImageTransitionOnScrollHero__fgImage--before {
+    opacity: 0
+}
+.ImageTransitionOnScrollHero--roll.animate .ImageTransitionOnScrollHero__fgImageWrap--0 .ImageTransitionOnScrollHero__fgImage--before {
+    transform: scale(0) rotate(180deg)
+}
+.ImageTransitionOnScrollHero--roll.animate .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage--before {
+    transform: scale(0) rotate(-180deg)
+}
+.ImageTransitionOnScrollHero--roll.animate .ImageTransitionOnScrollHero__fgImage--after {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+    transition-delay: .3s
+}
+.ImageTransitionOnScrollHero--roll.reset .ImageTransitionOnScrollHero__fgImage--before {
+    transition-delay: .3s
+}
+.ImageTransitionOnScrollHero--mischief.ready .ImageTransitionOnScrollHero__fgImage--before {
+    opacity: 1
+}
+.ImageTransitionOnScrollHero--mischief.ready .ImageTransitionOnScrollHero__fgImageWrap--0 .ImageTransitionOnScrollHero__fgImage--before {
+    transition-duration: .5s
+}
+.ImageTransitionOnScrollHero--mischief.ready .ImageTransitionOnScrollHero__fgImageWrap--0 .ImageTransitionOnScrollHero__fgImage--after {
+    transform: translateX(-50px)
+}
+.ImageTransitionOnScrollHero--mischief.ready .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage--before {
+    transform: scale(1) rotate(0)
+}
+.ImageTransitionOnScrollHero--mischief.ready .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage--after {
+    transform: scale(0) rotate(180deg)
+}
+.ImageTransitionOnScrollHero--mischief.animate .ImageTransitionOnScrollHero__fgImage--before {
+    opacity: 0
+}
+.ImageTransitionOnScrollHero--mischief.animate .ImageTransitionOnScrollHero__fgImageWrap--0 .ImageTransitionOnScrollHero__fgImage--after {
+    transform: translateX(0);
+    opacity: 1
+}
+.ImageTransitionOnScrollHero--mischief.animate .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage--before {
+    transform: scale(0) rotate(-180deg)
+}
+.ImageTransitionOnScrollHero--mischief.animate .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage--after {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+    transition-delay: .3s
+}
+.ImageTransitionOnScrollHero--mischief.reset .ImageTransitionOnScrollHero__fgImageWrap--0 .ImageTransitionOnScrollHero__fgImage--before {
+    transition-delay: .3s
+}
+.ImageTransitionOnScrollHero--mischief.reset .ImageTransitionOnScrollHero__fgImageWrap--1 .ImageTransitionOnScrollHero__fgImage--before {
+    transition-delay: .3s
+}
+.VideoHero {
+    width: 100%;
+    margin: 20px auto
+}
+.VideoHero__video {
+    display: none;
+    width: 100%;
+    max-width: 100%
+}
+@media(max-width: 767px) {
+    .VideoHero__video--mobile {
+        display: block
+    }
+}
+@media(min-width: 768px) {
+    .VideoHero__video--tabletGt {
+        display: block
+    }
+}
+.post__date {
+    font-weight: 600
+}
+.post--gobattleleague-season9 {
+    font-family: "Lato", "Roboto", Helvetica, Arial, sans-serif
+}
+.post--gobattleleague-season9 h1 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--gobattleleague-season9 h1 {
+        font-size: 32px
+    }
+}
+@media(min-width: 768px) {
+    .post--gobattleleague-season9 h1 {
+        font-size: 40px
+    }
+}
+.post--gobattleleague-season9 h2 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--gobattleleague-season9 h2 {
+        font-size: 24px
+    }
+}
+@media(min-width: 768px) {
+    .post--gobattleleague-season9 h2 {
+        font-size: 32px
+    }
+}
+.post--gobattleleague-season9 h3 {
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--gobattleleague-season9 h3 {
+        font-size: 20px
+    }
+}
+@media(min-width: 768px) {
+    .post--gobattleleague-season9 h3 {
+        font-size: 26px
+    }
+}
+.post--gobattleleague-season9 .MarkdownBlock {
+    margin-top: 40px
+}
+.post--gobattleleague-season9 .MarkdownBlock .MarkdownBlock {
+    margin-top: 20px
+}
+@media(max-width: 767px) {
+    .post--gobattleleague-season9 ul, .post--gobattleleague-season9 ol {
+        padding-left: 20px
+    }
+}
+.post--season-of-mischief-2021 {
+    color: #370172;
+    font-family: "Lato", "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 15px
+}
+.post--season-of-mischief-2021 h1 {
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--season-of-mischief-2021 h1 {
+        font-size: 32px
+    }
+}
+@media(min-width: 768px) {
+    .post--season-of-mischief-2021 h1 {
+        font-size: 40px
+    }
+}
+.post--season-of-mischief-2021 h2 {
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--season-of-mischief-2021 h2 {
+        font-size: 24px
+    }
+}
+@media(min-width: 768px) {
+    .post--season-of-mischief-2021 h2 {
+        font-size: 32px
+    }
+}
+.post--season-of-mischief-2021 h3 {
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--season-of-mischief-2021 h3 {
+        font-size: 20px
+    }
+}
+@media(min-width: 768px) {
+    .post--season-of-mischief-2021 h3 {
+        font-size: 20px
+    }
+}
+.post--season-of-mischief-2021 h4 {
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--season-of-mischief-2021 h4 {
+        font-size: 18px
+    }
+}
+@media(min-width: 768px) {
+    .post--season-of-mischief-2021 h4 {
+        font-size: 18px
+    }
+}
+@media(min-width: 768px) {
+    .post--season-of-mischief-2021 .post__body {
+        padding: 40px
+    }
+}
+.post--season-of-mischief-2021 .MarkdownBlock {
+    margin-top: 0
+}
+@media(max-width: 767px) {
+    .post--season-of-mischief-2021 .MarkdownBlock {
+        padding: 40px 0
+    }
+}
+@media(min-width: 768px) {
+    .post--season-of-mischief-2021 .MarkdownBlock {
+        padding: 40px
+    }
+}
+.post--halloween-2021 {
+    font-family: "Lato", "Roboto", Helvetica, Arial, sans-serif
+}
+.post--halloween-2021::after {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: url(https://lh3.googleusercontent.com/J07RbKNuEdA9D7Cm64-1VRZ1pdBVj5U07ReoQN1n5ZV1N_xP_qOcC8V4TPPfu613HHHzmcIXYUVgtve3VlBmw0stoSXeqGJFtC-lRCwdCLzK=s0);
+    background-size: 100% 100%;
+    height: 20%;
+    content: "";
+    z-index: 100;
+    pointer-events: none;
+    opacity: .8
+}
+.post--halloween-2021 h1 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--halloween-2021 h1 {
+        font-size: 32px
+    }
+}
+@media(min-width: 768px) {
+    .post--halloween-2021 h1 {
+        font-size: 40px
+    }
+}
+.post--halloween-2021 h2 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--halloween-2021 h2 {
+        font-size: 24px
+    }
+}
+@media(min-width: 768px) {
+    .post--halloween-2021 h2 {
+        font-size: 32px
+    }
+}
+.post--halloween-2021 h3 {
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px
+}
+@media(max-width: 767px) {
+    .post--halloween-2021 h3 {
+        font-size: 20px
+    }
+}
+@media(min-width: 768px) {
+    .post--halloween-2021 h3 {
+        font-size: 26px
+    }
+}
+.post--halloween-2021 .MarkdownBlock {
+    margin-top: 40px
+}
+.post--halloween-2021 .MarkdownBlock .MarkdownBlock {
+    margin-top: 20px
+}
+@media(max-width: 767px) {
+    .post--halloween-2021 ul, .post--halloween-2021 ol {
+        padding-left: 20px
+    }
+}
+@media(min-width: 1024px) {
+    .post--gobattleleague-season10 #guaranteed-encounters .ContainerBlock__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        -moz-column-gap: 24px;
+        column-gap: 24px
+    }
+}
+details#lovecup-red[open] summary::after,
+details#lovecup-pink[open] summary::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 100
+}
+details#lovecup-red details-dialog,
+details#lovecup-pink details-dialog {
+    position: fixed;
+    margin: 10vh auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    max-height: 70vh;
+    max-width: 90vw;
+    width: 448px;
+    overflow: auto;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-sizing: border-box
+}
+details#lovecup-red .gbls10dialog__title,
+details#lovecup-pink .gbls10dialog__title {
+    font-size: 1.5em;
+    font-weight: bold
+}
+@media(min-width: 1024px) {
+    .contest-rules-container {
+        max-width: 800px;
+        margin: 0 auto 100px;
+        padding: 60px;
+        border-radius: 30px
+    }
+}
+.contest-rules__content {
+    padding: 0 !important
+}
+
+.ContainerBlock__headline__title{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.ContainerBlock__profile-detail{
+    margin: 24px 0;
+}
+
+.ContainerBlock__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerBlock__form label{
+    width: 100%;
+    font-weight: bold;
+    margin: 16px 0 16px 0 ;
+    display: flex;
+    justify-content: center;
+}
+
+.ContainerBlock__form__input{
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.ContainerBlock__form .button{
+    margin: 42px 0 4px 0;
+    width: 250px;
+}

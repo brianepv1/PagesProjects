@@ -1,0 +1,128 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home - Account Details{% endblock %}
+
+{% block content %}
+
+<div class="blogPost">
+    <div class="blogPost__grid grid">
+        <div class="blogPost__grid__content">
+            <div class="blogPost__header">
+                <h2>Home Page</h2>
+                <div class="blogPost__header__icon">
+                    <img src="/assets/favicon.png" alt="Pokémon Toxic">
+                </div>
+                <p class="blogPost__header__title">Welcome back, {{ nickname }}!</p>
+            </div>
+
+
+            <div class="gblLeaderboard__trainer gblLeaderboard__trainer--">
+                <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__rank">
+
+                </div>
+                <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__details">
+
+                    <div class="gblLeaderboard__trainer__details__trainer">
+                        <div class="gblLeaderboard__trainer__details__trainer__name">
+                            Character Name
+                        </div>
+                    </div>
+                </div>
+                <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__battles">
+                    <div class="gblLeaderboard__trainer__battles__rating">
+                        Level
+                    </div>
+                </div>
+                <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__delete">
+                    <div class="gblLeaderboard__trainer__battles__rating">
+                    </div>
+                </div>
+            </div>
+
+            <div class="blogPost__post__blocks">
+                {% if accounts.length == 0 %}
+                <div>
+                    <h4 style="text-align:center; margin-top: 24px;">You dont have characters</h4>
+                    <div class="newuser__content__button" style="display: flex; justify-content: center;">
+                        <a class="button button--white-pill" role="button" href="/create_character"
+                            aria-label="Pokémon Toxic 101">
+                            <span class="button__label">Create character</span>
+                        </a>
+                    </div>
+                </div>
+                {% else %}
+                {% for account in accounts %}
+                <div class="gblLeaderboard__trainer gblLeaderboard__trainer--{{trainer.team}}">
+                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__rank">
+                        {{ loop.index }}
+                    </div>
+                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__details">
+
+                        <div class="gblLeaderboard__trainer__logo">
+                            <div class="simple4060__content__icon">
+                                <img class="image" decoding="async" loading="lazy"
+                                    src="https://lh3.googleusercontent.com/MxqAAjte5yQsQD0cC73SBVJuH6kX9F-fQ1X97VecyhGHGpixcT1ce7OftVuDufTSVIG_gY233437bOmw1AZFpg1Har4t5sP1jDo4GAX_so38dg=e365-w261"
+                                    alt="" width="261" height="261">
+                            </div>
+                        </div>
+                        <div class="gblLeaderboard__trainer__details__trainer">
+                            <div class="gblLeaderboard__trainer__details__trainer__name">
+                                {{ account['name'] }}
+                            </div>
+                            {% if account['sex'] == 0 %}
+                            <div class="gblLeaderboard__trainer__details__trainer__rank">
+                                Female
+                            </div>
+                            {% else %}
+                            <div class="gblLeaderboard__trainer__details__trainer__rank">
+                                Male
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__battles">
+                        <div class="gblLeaderboard__trainer__battles__rating">
+                            {{ account['level'] }}
+                        </div>
+                    </div>
+                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__delete">
+                        <div class="gblLeaderboard__trainer__battles__delete-player">
+                            <a class="gblLeaderboard__trainer__battles__delete-player__button"
+                                data-characterName="{{ account['name'] }}" data-accountID="{{ account['account_id'] }}"
+                                data-characterID="{{account['id']}}">
+                                <svg width="30px" height="30px" viewBox="0 0 156 156" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Artboard" stroke="none" stroke-width="1" fi)ll="none" fill-rule="evenodd">
+                                        <g id="icon_navmenu_close" transform="translate(19.000000, 0.000000)"
+                                            fill-rule="nonzero">
+                                            <circle id="White_Circle" fill="#de4e4b" cx="59.1" cy="78" r="40.5">
+                                            </circle>
+
+
+                                            <path
+                                                d="M69.7,95.7 L41.4,67.4 C39.4,65.4 39.4,62.3 41.4,60.3 L41.4,60.3 C43.4,58.3 46.5,58.3 48.5,60.3 L76.8,88.6 C78.8,90.6 78.8,93.7 76.8,95.7 L76.8,95.7 C74.8,97.7 71.7,97.7 69.7,95.7 Z"
+                                                id="Path" fill="#1D1D1F"></path>
+                                            <path
+                                                d="M48.5,95.7 L76.8,67.4 C78.8,65.4 78.8,62.3 76.8,60.3 L76.8,60.3 C74.8,58.3 71.7,58.3 69.7,60.3 L41.4,88.6 C39.4,90.6 39.4,93.7 41.4,95.7 L41.4,95.7 C43.4,97.7 46.5,97.7 48.5,95.7 Z"
+                                                id="Path" fill="#1D1D1F"></path>
+
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

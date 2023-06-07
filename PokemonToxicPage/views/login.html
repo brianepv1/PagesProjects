@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="blogPost">
+    <div class="blogPost__grid grid">
+        <div class="blogPost__grid__content">
+            
+            <div class="login">
+
+                
+                <div class="blogPost__header" style="justify-content: center; padding-top: 24px;">
+                    <div class="blogPost__header__icon">
+                        <img src="/assets/favicon.png" alt="Pokémon Toxic">
+                    </div>
+                    <a class="blogPost__header__title" href="/login">Login</a>
+                </div>
+    
+                <div class="links">
+                    <a href="/login" class="active">Login</a>
+                    <a href="/register">Register</a>
+                </div>
+    
+                <form class="ajax-form" action="" method="post">
+    
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                    </label>
+                    <input type="text" name="username" placeholder="Username" id="username" required>
+    
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                    </label>
+                    <input type="password" name="password" placeholder="Password" id="password" required>
+    
+                    <label id="rememberme">
+                        <input type="checkbox" name="rememberme" checked>Remember me
+                    </label>
+                    <a href="/forgotpassword">Forgot Password?</a>
+    
+                    <input type="hidden" name="token" value="{{ token }}">
+    
+                    <div class="msg" style="color: red;">{{ msg }}</div>
+    
+                    <input type="submit" value="Login">
+    
+                </form>
+    
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

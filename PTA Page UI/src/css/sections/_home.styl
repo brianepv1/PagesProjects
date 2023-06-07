@@ -1,0 +1,68 @@
+body
+	background-color dark-purple
+main
+	position relative
+	z-index 1
+.gradient-background
+	position absolute
+	background transparent
+	box-shadow -77px 4px 400px 109px rgba(93,53,185,1)
+	top 60px
+	left 10%
+	width 40%
+.c-welcome
+	&__container
+		display flex
+		flex-direction column
+		+TabletPortrait()
+			flex-direction row
+	&__CTA
+		padding 0 20px
+		+TabletPortrait()
+			width 40%
+	&__texto
+		h1,
+		p
+			color white
+			font-weight extraBold
+			font-size 42px
+			+TabletPortrait()
+				position relative
+				font-size 68px
+				padding-top 48px
+		p
+			font-size 55px
+			margin-top 24px
+			word-break break-all
+			line-height 55px
+			+TabletPortrait()
+				position relative
+				word-break normal
+				font-size 98px
+				z-index 2
+				margin-top 0px
+				
+	&__buttons
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content center
+		align-items center
+		gap 24px
+		&-item
+			display flex
+			flex-direction row
+			justify-content center
+			align-items center
+			p
+				text-align left
+			+Mobile()
+				width calc(50% - 60px)
+	&__image
+		margin-top 24px
+		img
+			width 100%
+			border-top-left-radius 35%
+			border-bottom-left-radius 35%
+		+TabletPortrait()
+			width 60%

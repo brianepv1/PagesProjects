@@ -1,0 +1,38 @@
+extends template/_template
+
+append configuracion
+	-var page			= {}
+	-page['link']		= 'index.html'
+	-page['title']		= 'Inicio'
+	-page['descrip']	= 'description'
+	-page['keys']		= 'keywords'
+	-page['lang']		= 'es'
+	-page['responsive']	= true
+	-page['section']	= []
+	-page['libsCss']	= []
+	-page['libs']		= ['_alert', '_customForm', '_fillViews', '_select', '_validate']
+	-page['plugins']	= []
+	-page['js']			= ['home'] 
+
+	- var path = ''
+		if(page.link !== 'index.html')
+			- path = '../'
+
+block contenido
+	.gradient-background
+	main
+		.c-welcome__container
+			.c-welcome__CTA
+				.c-welcome__texto
+					h1 Start your #[p Adventure]
+				.c-welcome__buttons
+					a.o-btn.o-btn-icon.c-welcome__buttons-item(href="#!" target="_blank" title="Login")
+						i.fa.fa-user-circle-o
+						p Login
+					a.o-btn.o-btn-icon.c-welcome__buttons-item(href="#!" target="_blank" title="Register")
+						i.fa.fa-arrow-right
+						p Register
+			.c-welcome__image
+				img(src="images/content/welcome_adventures.jpg", alt="Welcome Image")
+				
+

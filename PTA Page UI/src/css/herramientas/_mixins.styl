@@ -1,0 +1,94 @@
+positionAbsoluteCenter(alto, ancho)
+	position absolute
+	height alto
+	width ancho
+	top 50%
+	left 50%
+	transform translateX(-50%) translateY(-50%)
+
+fontface(nombreFuente, url)
+	@font-face
+		font-family nombreFuente
+		src url(url + nombreFuente +'.eot')
+		src url(url + nombreFuente +'.eot') format('embedded-opentype'), url(url + nombreFuente +'.ttf') format('truetype'), url(url + nombreFuente +'.woff') format('woff'), url(url + nombreFuente +'.svg') format('svg')
+		font-weight normal
+		font-style normal
+		font-display block
+
+//Media Queries min
+Desktop(ruptura = min)
+	if (ruptura == max)
+		@media (max-width desktop)
+			{block}
+	else if (ruptura == only)
+		@media (min-width desktop)
+			{block}
+	else
+		@media (min-width desktop)
+			{block}
+
+TabletLandscape(ruptura = min)
+	if (ruptura == max)
+		@media (max-width tablet-landscape)
+			{block}
+	else if (ruptura == only)
+		@media (min-width tablet-landscape) and (max-width desktop)
+			{block}
+	else
+		@media (min-width tablet-landscape)
+			{block}
+
+TabletPortrait(ruptura = min)
+	if (ruptura == max)
+		@media (max-width tablet-portrait)
+			{block}
+	else if (ruptura == only)
+		@media (min-width tablet-portrait) and (max-width tablet-landscape)
+			{block}
+	else
+		@media (min-width tablet-portrait)
+			{block}
+
+Tablet(ruptura = min)
+	if (ruptura == max)
+		@media (max-width tablet)
+			{block}
+	else if (ruptura == only)
+		@media (min-width tablet) and (max-width tablet-portrait)
+			{block}
+	else
+		@media (min-width tablet)
+			{block}
+
+Mobile(ruptura = min)
+	if (ruptura == max)
+		@media (max-width mobile)
+			{block}
+	else if (ruptura == only)
+		@media (min-width mobile) and (max-width tablet)
+			{block}
+	else
+		@media (min-width mobile)
+			{block}
+
+MobileLandscape(ruptura = min)
+	if (ruptura == max)
+		@media (max-width mobile-landscape)
+			{block}
+	else if (ruptura == only)
+		@media (min-width mobile-landscape) and (max-width mobile)
+			{block}
+	else
+		@media (min-width mobile-landscape)
+			{block}
+
+MobilePortrait(ruptura = min)
+	if (ruptura == max)
+		@media (max-width mobile-portrait)
+			{block}
+	else if (ruptura == only)
+		@media (min-width mobile-portrait) and (max-width mobile-landscape)
+			{block}
+	else
+		@media (min-width mobile-portrait)
+			{block}

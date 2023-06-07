@@ -1,0 +1,166 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ content.html_title }}</title>
+    <meta name="description" content="{{ content.meta_description }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <body>
+
+	<section class="templates">
+		<div class="programas__tab-content" id="tpl-tabs-content"> </div>
+		<div class="programas__tab-content-item" id="tpl-tabs-content-item">
+			<a href="#!" id="tpl-tabs-content-link">
+				<div class="horario">
+					10:00 AM
+				</div>
+				<div class="titulo">
+					Lorem ipsum dolor sit amet,
+				</div>
+				<div class="contenido">
+				</div>
+			</a>
+		</div>
+	</section>
+	
+	<!--
+    <section class="banner__bg-first">		
+		<div class="container">
+			<div class="banner-vender">
+				<h2>¿Buscas llegar a más clientes?</h2>
+				<strong>Comienza a vender tus productos 100% online de forma rápida y sencilla</strong>
+				<a class="agenda__btn"href="#!">Comenzar a vender</a>
+			</div>
+		</div>
+	</section>
+	-->
+	
+	<section class="banner__bg-second">		
+		<div class="container">
+			<div class="banner-vender">
+				<h2>Haz crecer tu red de contactos</h2>
+				<strong>Conoce a los más de 20 partners listos para ayudarte a hacer creccer tu emprendimiento.</strong>
+				<a class="agenda__btn"href="#!">Hacer Alianzas Estratégicas</a>
+			</div>
+		</div>
+	</section>
+	
+
+	<section class="programas">
+		<div class="container">
+			<div class="programas__titulo">
+				<h2>AGENDA</h2>
+				<strong>Estos son los eventos que Valor Pyme y Etmday traen para ti</strong>
+			</div>
+			<div class="programas__tab">
+				<h3>PROGRAMA</h3>
+				<ul class="programas__tab-select js-programas-tabs">
+					<li class="is-active" id="day1" data-date="2021-12-10">
+						<a href="#!" > Viernes 10 diciembre </a> 
+					</li>
+					<li id="day2" data-date="2021-12-11">
+						<a href="#!"> Sabado 11 diciembre </a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="suscribete">
+		<div class="container">
+			<div class="suscribete__titulo">
+				<h3>¿En busca de más contenidos para emprendedores?</h3>
+				<h2>Suscríbete a los temas que más te apasionen</h2>
+			</div>
+			<div class="suscribete__contenedor">
+				<div class="suscribete__card">
+					<div class="suscribete__card-header">
+						<img src="https://via.placeholder.com/50x50" alt="IMG">
+						<strong>Digitalización</strong>
+					</div>
+					<div class="suscribete__card-body">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adminim veniam, quis nostrud</p>
+					</div>
+					<div class="suscribete__card-footer">
+						<div class="suscribete__card-footer-container">
+							<img src="https://via.placeholder.com/25x25" alt="ICON">
+							<span>Suscríbete</span>
+						</div>
+					</div>
+				</div>
+				<div class="suscribete__card">
+					<div class="suscribete__card-header">
+						<img src="https://via.placeholder.com/50x50" alt="IMG">
+						<strong>Formacion</strong>
+					</div>
+					<div class="suscribete__card-body">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adminim veniam, quis nostrud</p>
+					</div>
+					<div class="suscribete__card-footer">
+						<div class="suscribete__card-footer-container">
+							<img src="https://via.placeholder.com/25x25" alt="ICON">
+							<span>Suscríbete</span>
+						</div>
+					</div>
+				</div>
+				<div class="suscribete__card">
+					<div class="suscribete__card-header">
+						<img src="https://via.placeholder.com/50x50" alt="IMG">
+						<strong>Finanzas</strong>
+					</div>
+					<div class="suscribete__card-body">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adminim veniam, quis nostrud</p>
+					</div>
+					<div class="suscribete__card-footer">
+						<div class="suscribete__card-footer-container">
+							<img src="https://via.placeholder.com/25x25" alt="ICON">
+							<span>Suscríbete</span>
+						</div>
+					</div>
+				</div>
+				<div class="suscribete__card">
+					<div class="suscribete__card-header">
+						<img src="https://via.placeholder.com/50x50" alt="IMG">
+						<strong>Crear Pyme</strong>
+					</div>
+					<div class="suscribete__card-body">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adminim veniam, quis nostrud</p>
+					</div>
+					<div class="suscribete__card-footer">
+						<div class="suscribete__card-footer-container">
+							<img src="https://via.placeholder.com/25x25" alt="ICON">
+							<span>Suscríbete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="suscribete__footer">
+				<a href="#!">
+					<h4>Descubre todas nuestras categorías</h4>
+					<span class=""></span>
+				</a>
+				
+			</div>
+		</div>
+	</section>
+
+	
+    
+  </body>
+  <script type="text/javascript" src="JS/main.js"> </script>
+
+</html>

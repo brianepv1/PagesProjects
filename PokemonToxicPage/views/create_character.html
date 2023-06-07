@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home - Create Character{% endblock %}
+
+{% block content %}
+<div class="blogPost">
+    <div class="blogPost__grid grid">
+        <div class="blogPost__grid__content">
+            <div class="blogPost__header">
+                <h2>Create Character Page</h2>
+                <div class="blogPost__header__icon">
+                    <img src="/assets/favicon.png" alt="Pokémon Toxic">
+                </div>
+            </div>
+            <div class="blogPost__post__blocks">
+                <div class="block block--ContainerBlock">
+                    <div class="ContainerBlock" style="--background: #898eae;--textColor: #fff">
+                        <div class="ContainerBlock__blocks">
+                            <div class="block block--ContainerBlock">
+                                <div class="ContainerBlock">
+                                    <h2 class="ContainerBlock__headline">
+                                        <span class="ContainerBlock__headline__title">Fill the form</span>
+                                    </h2>
+                                    <div class="ContainerBlock__body">
+                                        <p>Start your adventure with a new character.</p>
+                                    </div>
+                                    <div class="ContainerBlock__blocks">
+                                        <div class="block block--ImageBlock">
+                                            <div class="ImageBlock">
+                                            </div>
+                                        </div>
+                                        <div class="block block--ContainerBlock">
+                                            <div class="ContainerBlock" style="--textColor: #fff;--background: #51456e">
+                                                <h3 class="ContainerBlock__headline">
+                                                    <span class="ContainerBlock__headline__title">Create a new
+                                                        character!</span>
+                                                </h3>
+
+                                                <div class="ContainerBlock__body" style="justify-content: center;">
+                                                    {% if msg != ""%}
+                                                    <h3 class="ContainerBlock__headline">
+                                                        <span class="ContainerBlock__headline__title"
+                                                            style="color: red;">{{ msg }}</span>
+                                                    </h3>
+                                                    {% endif %}
+                                                    <form action="" method="post" class="ContainerBlock__form">
+
+                                                        <label for="characterName">Character Name</label>
+                                                        <input class="ContainerBlock__form__input" type="text" value=""
+                                                            name="characterName" id="characterName"
+                                                            placeholder="Character Name">
+
+                                                        <label>City</label>
+                                                        <select class="ContainerBlock__form__input" name="city"
+                                                            id="city">
+                                                            <option value="1">Saffron City</option>
+                                                        </select>
+
+                                                        <label>Sex</label>
+                                                        <select class="ContainerBlock__form__input" name="sex" id="sex">
+                                                            <option value="1">Male</option>
+                                                            <option value="0">Female</option>
+                                                        </select>
+
+                                                        <label>Vocation</label>
+                                                        <select class="ContainerBlock__form__input" name="vocation"
+                                                            id="vocation">
+                                                            <option value="1">Pokemon Trainer</option>
+                                                        </select>
+
+                                                        <input class="button button--white-pill" type="submit"
+                                                            value="Create character" name="submit">
+
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

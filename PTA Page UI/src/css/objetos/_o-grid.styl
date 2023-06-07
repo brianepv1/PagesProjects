@@ -1,0 +1,96 @@
+.o-container
+	margin 0 auto
+	max-width container-width
+	padding 0 20px
+
+.o-row
+	margin 0 auto
+
+	&:after
+		clear both
+		content ''
+		display table
+
+.o-middle
+	float none !important
+	margin 0 auto
+
+.o-col-12
+	float left
+	width 100%
+
+.o-col-11
+	float left
+	width 91.66666667%
+
+.o-col-10
+	float left
+	width 83.33333333%
+
+.o-col-9
+	float left
+	width 75%
+
+.o-col-8
+	float left
+	width 66.66666667%
+
+.o-col-7
+	float left
+	width 58.33333333%
+
+.o-col-6
+	float left
+	width 50%
+
+.o-col-5
+	float left
+	width 41.66666667%
+
+.o-col-4
+	float left
+	width 33.33333333%
+
+.o-col-3
+	float left
+	width 25%
+
+.o-col-2
+	float left
+	width 16.66666667%
+
+.o-col-1
+	float left
+	width 8.33333333%
+
+.o-block
+	overflow hidden
+
+	.o-b-full
+		stack()
+
+	.o-b-half
+		col(1/2)
+
+	.o-b-2of3
+		col(2/3)
+
+	.o-b-1of3
+		col(1/3)
+
+	.o-b-1of4
+		col(1/4)
+
+@media (max-width: 780px)
+	.o-block
+		.o-b-1of4
+			col(1/2, cycle:2)
+
+@media (max-width: 560px)
+	.o-block
+		.o-b-full,
+		.o-b-half,
+		.o-b-2of3,
+		.o-b-1of3,
+		.o-b-1of4
+			stack()

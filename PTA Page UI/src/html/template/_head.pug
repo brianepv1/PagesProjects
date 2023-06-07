@@ -1,0 +1,81 @@
+- current_profile = CONST_DEV_PROFILE
+- var urlFolder  = ''
+- var indice = page.link
+
+if(indice !== 'index.html')
+	- urlFolder = '../'
+
+head
+	meta( charset='utf-8')
+
+	title #{page.title} - #{site.name}
+	meta(name='description' content=page.descrip )
+	meta(name='keywords' content=page.keys )
+	link(rel='shortcut icon' href=path + 'images/global/favicon.ico' type='image/x-icon')
+	link(rel='shortcut icon' href=path + 'images/global/favicon-16x16.png' type='image/png' sizes='16x16')
+	link(rel='shortcut icon' href=path + 'images/global/favicon-36x36.png' type='image/png' sizes='36x36')
+	link(rel='shortcut icon' href=path + 'images/global/favicon-48x48.png' type='image/png' sizes='48x48')
+	link(rel='shortcut icon' href=path + 'images/global/favicon-96x96.png' type='image/png' sizes='96x96')
+	link(rel='shortcut icon' href=path + 'images/global/favicon-144x144.png' type='image/png' sizes='144x144')
+	link(rel='canonical' href=site.url )
+	link(rel='preconnect' href='https://fonts.googleapis.com')
+	link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+	link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap' rel='stylesheet')
+	link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" )
+
+	meta( name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' )
+
+	//-ESTILOS LIBRERIAS
+	- var libsCss = page.libsCss
+	- var libs_css = {}
+
+	- libs_css['dev'] = []
+	- libs_css['prod'] = []
+
+	if(libsCss)
+		-for(var lib in libsCss)
+			-libs_css['dev'].push('css/libs/'+libsCss[lib]+'.css')
+			-libs_css['prod'].push('css/libs/'+libsCss[lib]+'.min.css')
+
+	//-if(libsCss)
+		- var total_prints = libs_css[current_profile].length
+		- for(var i = 0; i < total_prints; i++)
+			link(rel='stylesheet' type='text/css' href=urlFolder+libs_css[current_profile][i])
+
+
+
+	// ESTILOS GLOBALES
+	- var global_css =  {}
+
+	- global_css['dev'] = ['css/style.css']
+	- global_css['prod'] = ['css/style.min.css']
+
+	//-if global_css
+		- var total_global = global_css[current_profile].length
+		- for(var i = 0; i < total_global; i++)
+			link(rel='stylesheet' type='text/css' href=urlFolder+global_css[current_profile][i])
+
+	-if (process.title === 'gulp produccion')
+		link(rel='stylesheet' type='text/css' href=urlFolder + 'css/style.min.css')
+	-else
+		link(rel='stylesheet' type='text/css' href=urlFolder + 'css/style.css')
+
+	//-ESTILOS PRINTS
+	- var printCss = page.print
+	- var print_css = {}
+
+	- print_css['dev'] = []
+	- print_css['prod'] = []
+
+	if(printCss)
+		-for(var print in printCss)
+			-print_css['dev'].push('css/'+printCss[print]+'.css')
+			-print_css['prod'].push('css/'+printCss[print]+'.min.css')
+
+	if(printCss)
+		- var total_prints = print_css[current_profile].length
+		- for(var i = 0; i < total_prints; i++)
+			link(rel='stylesheet' type='text/css' media='print' href=urlFolder+print_css[current_profile][i])
+
+	//-Color de aplicacion para dispositivos mobiles
+	meta(name='theme-color' content='#FA5B0F')

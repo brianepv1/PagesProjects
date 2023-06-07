@@ -1,0 +1,941 @@
+{% extends 'layout.html' %}
+
+{% block title %}Pokemon Toxic{% endblock %}
+
+{% block content %}
+<div class="intro intro--video">
+	<div class="intro__background intro__background--desktop">
+		<img src="./assets/welcome_background.jpg" alt="Pokemon Toxic">
+	</div>
+	<div class="intro__background intro__background--mobile">
+		<img src="./assets/welcome_background.jpg" alt="Pokemon Toxic">
+	</div>
+	<div class="intro__jump">
+		<a href=/ role="button" aria-label="Go to News section">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+				<style type="text/css">
+					.jump {
+						fill: none;
+						stroke: #FFFFFF;
+						stroke-width: 2;
+						stroke-linecap: round;
+						stroke-miterlimit: 10;
+					}
+				</style>
+				<circle class="jump" cx="20" cy="20" r="18"></circle>
+				<polyline class="jump" points="29,16.8 20,25.8 11,16.8 "></polyline>
+			</svg>
+		</a>
+	</div>
+</div>
+<div class="newuser">
+	<div class="newuser__background">
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w2048 2x, https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w1024"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w2880 2x, https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w1440"
+				media="(min-width: 1024px) and (max-width: 1339px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w2880 2x, https://lh3.googleusercontent.com/5-w5yrCLD69zlOIfgMndRr4dMhrKW5u8nJVojvrUqnSI8ln1ywgqzNFjWQJYrN2YlVSBMHNyXzhcIrQXRPUYTcqJXjAzYbJyXiXb_uK3YO2G-g=rw-e365-w1440"
+				media="(min-width: 1440px)">
+			<img class="image tablet-gt" decoding="async" loading="lazy" src="./assets/unnamed(1).png" alt="" width="1927"
+				height="300">
+		</picture>
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/0d161yuiHwAt16scYGTjQ_ljTmKsWFU5kktkrGjOKMOTz2NUwgoj4WFIbNKQb7_ibrsBqtCRfFSHdqVGryNjo6yCjnitRc2DhSQvQcaEx25KAw=rw-e365-w1536 2x, https://lh3.googleusercontent.com/0d161yuiHwAt16scYGTjQ_ljTmKsWFU5kktkrGjOKMOTz2NUwgoj4WFIbNKQb7_ibrsBqtCRfFSHdqVGryNjo6yCjnitRc2DhSQvQcaEx25KAw=rw-e365-w768"
+				media="(max-width: 767px)">
+			<img class="image mobile" decoding="async" loading="lazy" src="./assets/newuser_bg.jpg" alt="" width="1175"
+				height="268">
+		</picture>
+	</div>
+	<div class="grid">
+		<div class="newuser__inner">
+			<div class="newuser__logo">
+				<img class="image" decoding="async" loading="lazy" src="./assets/unnamed(2).png" alt="" width="800"
+					height="800">
+			</div>
+			<div class="newuser__content">
+				<div class="newuser__content__title">New Trainer? Create your account!</div>
+				<div class="newuser__content__body">Follow this simple guide on getting started with Pokémon Toxic!</div>
+				<div class="newuser__content__button">
+					<a class="button button--white-pill" role="button" href="/register" aria-label="Pokémon Toxic 101">
+						<span class="button__label">Create your account here!</span>
+					</a>
+				</div>
+			</div>
+			<div class="newuser__image">
+				<picture>
+					<source type="image/webp"
+						srcset="https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w1536 2x, https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w768"
+						media="(max-width: 767px)">
+					<source type="image/webp"
+						srcset="https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w2048 2x, https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w1024"
+						media="(min-width: 768px) and (max-width: 1023px)">
+					<source type="image/webp"
+						srcset="https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w2880 2x, https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w1440"
+						media="(min-width: 1024px) and (max-width: 1339px)">
+					<source type="image/webp"
+						srcset="https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w2880 2x, https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w1440"
+						media="(min-width: 1440px)">
+					<img class="image" decoding="async" loading="lazy" src="./assets/unnamed(3).png" alt="" width="567"
+						height="227">
+				</picture>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="latestnews ready" id="news" data-component="LatestNews" data-component-mounted="true">
+	<div class="latestnews__background">
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w2880 2x, https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440"
+				media="(min-width: 1024px) and (max-width: 1339px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w2880 2x, https://lh3.googleusercontent.com/4I4XB51OZpQL-JuSUcd8yrchFvAXJrK405d6CtVX9hXOqAC4vFTeuwFACbVzPSCOEeRtMHlLqA33rvlcnGb3FPTSfOuusljfWH9sf1U45Aaq=rw-e365-w1440"
+				media="(min-width: 1440px)">
+			<img class="image laptop-gt" decoding="async" loading="lazy" src="./assets/background_lightWhite.jpg" alt=""
+				width="1922" height="959">
+		</picture>
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/G96FZlHKqinn3Set04FGBnz1XMCeObkJtdcLCiTXFoG2W8SlQb_qVdvYdpf4Qd04G7piQz6lOfYis5TMEL-KgzUbFgZOSyJj3gBdQuRFhVp5cOs=rw-e365-w1536 2x, https://lh3.googleusercontent.com/G96FZlHKqinn3Set04FGBnz1XMCeObkJtdcLCiTXFoG2W8SlQb_qVdvYdpf4Qd04G7piQz6lOfYis5TMEL-KgzUbFgZOSyJj3gBdQuRFhVp5cOs=rw-e365-w768"
+				media="(max-width: 767px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/G96FZlHKqinn3Set04FGBnz1XMCeObkJtdcLCiTXFoG2W8SlQb_qVdvYdpf4Qd04G7piQz6lOfYis5TMEL-KgzUbFgZOSyJj3gBdQuRFhVp5cOs=rw-e365-w2048 2x, https://lh3.googleusercontent.com/G96FZlHKqinn3Set04FGBnz1XMCeObkJtdcLCiTXFoG2W8SlQb_qVdvYdpf4Qd04G7piQz6lOfYis5TMEL-KgzUbFgZOSyJj3gBdQuRFhVp5cOs=rw-e365-w1024"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<img class="image tablet-lt" decoding="async" loading="lazy" src="./assets/unnamed(5).jpg" alt="" width="1170"
+				height="780">
+		</picture>
+	</div>
+	<div class="latestnews__content">
+		<div class="latestnews__content__title">Latest Updates</div>
+	</div>
+	<div class="latestnews__loading">
+		<div class="loading loading--black">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div class="latestnews__postsWrap grid">
+		<div class="latestnews__posts"><a class="latestnews__post"
+				href="/"
+				title="The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon Toxic this November! ">
+				<div class="latestnews__post__image"><img src="./assets/unnamed(6).jpg" width="1920" height="1080" alt="">
+				</div>
+				<div class="latestnews__post__content">
+					<div class="latestnews__post__content__date">Nov 7, 2022</div>
+					<div class="latestnews__post__content__title" data-component="MultilineEllipsis"
+						title="The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon Toxic this November!"
+						data-component-mounted="true" style="max-height: 56px;"><span> The Greedy Gluttons event and a Team
+							GO</span> <span
+							style="display: inline-block; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Rocket
+							takeover serve up adventure in Pokémon Toxic this November!</span></div>
+				</div>
+			</a><a class="latestnews__post" href="/"
+				title="A new discovery! Gimmighoul, a Pokémon from the Paldea region!">
+				<div class="latestnews__post__image"><img src="./assets/unnamed(7).png" width="1920" height="1080" alt="">
+				</div>
+				<div class="latestnews__post__content">
+					<div class="latestnews__post__content__date">Nov 6, 2022</div>
+					<div class="latestnews__post__content__title" data-component="MultilineEllipsis"
+						title="A new discovery! Gimmighoul, a Pokémon from the Paldea region!" data-component-mounted="true"
+						style="max-height: 56px;"><span> A new discovery! Gimmighoul, a Pokémon from</span> <span>the Paldea
+							region!</span></div>
+				</div>
+			</a><a class="latestnews__post" href="/"
+				title="Developer Diaries: The Art of Pokémon Toxic">
+				<div class="latestnews__post__image"><img src="./assets/unnamed(8).jpg" width="1600" height="1066" alt="">
+				</div>
+				<div class="latestnews__post__content">
+					<div class="latestnews__post__content__date">Nov 2, 2022</div>
+					<div class="latestnews__post__content__title" data-component="MultilineEllipsis"
+						title="Developer Diaries: The Art of Pokémon Toxic" data-component-mounted="true"
+						style="max-height: 56px;"><span> Developer Diaries: The Art</span> <span>of Pokémon Toxic</span></div>
+				</div>
+			</a><a class="latestnews__post" href="/" title="Thanks for making memories at Pokémon Toxic Safari Zone: Taipei!
+">
+				<div class="latestnews__post__image"><img src="./assets/unnamed(9).jpg" width="1024" height="512" alt="">
+				</div>
+				<div class="latestnews__post__content">
+					<div class="latestnews__post__content__date">Oct 31, 2022</div>
+					<div class="latestnews__post__content__title" data-component="MultilineEllipsis"
+						title="Thanks for making memories at Pokémon Toxic Safari Zone: Taipei!" data-component-mounted="true"
+						style="max-height: 56px;"><span> Thanks for making</span> <span
+							style="display: inline-block; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">memories
+							at Pokémon Toxic Safari Zone: Taipei!</span></div>
+				</div>
+			</a><a class="latestnews__post" href="/"
+				title="Campfire, Niantic’s social app, is available in more US cities just in time for Halloween!">
+				<div class="latestnews__post__image"><img src="./assets/unnamed(10).jpg" width="1920" height="1080" alt="">
+				</div>
+				<div class="latestnews__post__content">
+					<div class="latestnews__post__content__date">Oct 28, 2022</div>
+					<div class="latestnews__post__content__title" data-component="MultilineEllipsis"
+						title="Campfire, Niantic’s social app, is available in more US cities just in time for Halloween!"
+						data-component-mounted="true" style="max-height: 56px;"><span> Campfire, Niantic’s social</span> <span
+							style="display: inline-block; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">app,
+							is available in more US cities just in time for Halloween!</span></div>
+				</div>
+			</a></div>
+	</div>
+	<div class="latestnews__button">
+		<a class="button button--white-pill" role="button" href="/news" aria-label="More News">
+			<span class="button__label">More News</span>
+		</a>
+	</div>
+</div>
+<div class="simple4060 simple4060--iconGridLayout simple4060--catchPokemon" id="learn">
+	<div class="simple4060__background">
+		<picture>
+			<img class="image simple4060__background__image" decoding="async" loading="lazy" src="./assets/InGame2.png"
+				alt="" width="1920" height="1278">
+		</picture>
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/39fWyzZddwsbUYLvJ99H5Gxj2erERkIRY--psXpnKMerQfZmO5Wd5AmULRgmmlNZaSrcUkvKAf0liZBkPquwhmmfeWEql_S_mnapIzau83l0WV4=rw-e365-w2880 2x, https://lh3.googleusercontent.com/39fWyzZddwsbUYLvJ99H5Gxj2erERkIRY--psXpnKMerQfZmO5Wd5AmULRgmmlNZaSrcUkvKAf0liZBkPquwhmmfeWEql_S_mnapIzau83l0WV4=rw-e365-w1440"
+				media="(min-width: 1024px) and (max-width: 1339px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/39fWyzZddwsbUYLvJ99H5Gxj2erERkIRY--psXpnKMerQfZmO5Wd5AmULRgmmlNZaSrcUkvKAf0liZBkPquwhmmfeWEql_S_mnapIzau83l0WV4=rw-e365-w2880 2x, https://lh3.googleusercontent.com/39fWyzZddwsbUYLvJ99H5Gxj2erERkIRY--psXpnKMerQfZmO5Wd5AmULRgmmlNZaSrcUkvKAf0liZBkPquwhmmfeWEql_S_mnapIzau83l0WV4=rw-e365-w1440"
+				media="(min-width: 1440px)">
+			<img class="image simple4060__background__overlay laptop-gt" decoding="async" loading="lazy"
+				src="./assets/unnamed(12).png" alt="" width="923" height="611">
+		</picture>
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/tlIBC-OoNcTiL7SXVcrCIG91xE_XVFzYyRKLouFq5NV7LYOznYyXI7ualBMV15H9L1eGWVGz5Co1GXqqgJYDZ-5sDY7QzPPeTID975gJ3PIpNMc=rw-e365-w1536 2x, https://lh3.googleusercontent.com/tlIBC-OoNcTiL7SXVcrCIG91xE_XVFzYyRKLouFq5NV7LYOznYyXI7ualBMV15H9L1eGWVGz5Co1GXqqgJYDZ-5sDY7QzPPeTID975gJ3PIpNMc=rw-e365-w768"
+				media="(max-width: 767px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/tlIBC-OoNcTiL7SXVcrCIG91xE_XVFzYyRKLouFq5NV7LYOznYyXI7ualBMV15H9L1eGWVGz5Co1GXqqgJYDZ-5sDY7QzPPeTID975gJ3PIpNMc=rw-e365-w2048 2x, https://lh3.googleusercontent.com/tlIBC-OoNcTiL7SXVcrCIG91xE_XVFzYyRKLouFq5NV7LYOznYyXI7ualBMV15H9L1eGWVGz5Co1GXqqgJYDZ-5sDY7QzPPeTID975gJ3PIpNMc=rw-e365-w1024"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<img class="image simple4060__background__overlay tablet-lt" decoding="async" loading="lazy"
+				src="./assets/unnamed(13).jpg" alt="" width="1259" height="618">
+		</picture>
+	</div>
+	<div class="simple4060__contentWrap grid">
+		<div class="simple4060__content">
+			<div class="simple4060__content__icon">
+				<img class="image" decoding="async" loading="lazy" src="./assets/unnamed(14).png" alt="" width="261"
+					height="261">
+			</div>
+			<div class="simple4060__content__title">Catch Pokémons</div>
+			<div class="simple4060__content__subtitle">Start your own adventure!</div>
+			<div class="simple4060__content__body">Catch em'all with you favorite starter Pokémon. Do Quests, Trade
+				Pokémons and get more friends in your adventure!.</div>
+		</div>
+	</div>
+</div>
+<div class="banner banner--items" id="items">
+	<div class="banner__background">
+		<picture>
+			<img class="image laptop-gt" decoding="async" loading="lazy" src="./assets/InGame4.png" alt="" width="1920"
+				height="1016">
+		</picture>
+		<picture>
+			<img class="image tablet-lt" decoding="async" loading="lazy" src="./assets/InGame4.png" alt=""
+				width="1173" height="952">
+		</picture>
+	</div>
+	<div class="banner__itemImages">
+		<img class="image banner__item banner__item--pokeball" decoding="async" loading="lazy"
+			src="./assets/unnamed(17).png" alt="" width="200" height="200">
+		<img class="image banner__item banner__item--10kegg" decoding="async" loading="lazy"
+			src="./assets/unnamed(18).png" alt="" width="200" height="200">
+		<img class="image banner__item banner__item--nanab" decoding="async" loading="lazy"
+			src="./assets/unnamed(19).png" alt="" width="200" height="200">
+	</div>
+	<div class="grid">
+		<div class="banner__content">
+			<div class="banner__content__title" style="color: white;">Items for Your Adventure</div>
+			<div class="banner__content__body" style="color: white;"></div>
+		</div>
+	</div>
+</div>
+<!--
+<div class="row choose-clan d-none d-lg-block">
+		<div class="position-relative mt-4 mb-5" style="z-index: 3;">
+			<div class="latestnews__content">
+				<div class="latestnews__content__title">Choose your clan
+				</div>
+			</div>
+			<div class="latestnews__content">
+				<div class="latestnews__content__title">
+					Catch em'all with you favorite starter Pokémon. Do Quests, Trade Pokémons and get more friends in your adventure!.
+				</div>
+			</div>
+			<ul class="nav justify-content-center mt-4" role="tablist">
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0 active" id="naturia-tab" data-toggle="tab" data-target="#naturia" type="button" role="tab" aria-controls="naturia" aria-selected="true">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_naturia_element.webp" width="68" height="57" style="top: -12%;" alt="Naturia Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Naturia">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Naturia</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="malefic-tab" data-toggle="tab" data-target="#malefic" type="button" role="tab" aria-controls="malefic" aria-selected="true">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_malefic_element.webp" width="68" height="57" style="top: -12%;" alt="Malefic Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Malefic">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Malefic</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="wingeon-tab" data-toggle="tab" data-target="#wingeon" type="button" role="tab" aria-controls="wingeon" aria-selected="true">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_wingeon_element.webp" width="68" height="57" style="top: -12%;" alt="Wingeon Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Wingeon">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Wingeon</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="raibolt-tab" data-toggle="tab" data-target="#raibolt" type="button" role="tab" aria-controls="raibolt" aria-selected="false">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_raibolt_element.webp" width="68" height="57" style="top: -12%;" alt="Raibolt Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Raibolt">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Raibolt</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="volcanic-tab" data-toggle="tab" data-target="#volcanic" type="button" role="tab" aria-controls="volcanic" aria-selected="true">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_volcanic_element.webp" width="68" height="57" style="top: -12%;" alt="Volcanic Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Volcanic">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Volcanic</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="gardestrike-tab" data-toggle="tab" data-target="#gardestrike" type="button" role="tab" aria-controls="gardestrike" aria-selected="true">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_gardestrike_element.webp" width="68" height="57" style="top: -12%;" alt="Gardestrike Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Gardestrike">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Gardestrike</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="orebound-tab" data-toggle="tab" data-target="#orebound" type="button" role="tab" aria-controls="orebound" aria-selected="false">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_orebound_element.webp" width="68" height="57" style="top: -12%;" alt="Orebound Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Orebound">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Orebound</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="psycraft-tab" data-toggle="tab" data-target="#psycraft" type="button" role="tab" aria-controls="psycraft" aria-selected="false">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_psycraft_element.webp" width="68" height="57" style="top: -12%;" alt="Psycraft Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Psycraft">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Psycraft</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="seavell-tab" data-toggle="tab" data-target="#seavell" type="button" role="tab" aria-controls="seavell" aria-selected="true">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_seavell_element.webp" width="68" height="57" style="top: -12%;" alt="Seavell Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Seavell">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Seavell</span>
+							</div>
+						</div>
+					</button>
+				</li>
+				<li class="nav-item btn-clan-wrapper" role="presentation">
+					<button class="nav-link nav-tab-clan-elements bg-transparent p-0 border-0" id="ironhard-tab" data-toggle="tab" data-target="#ironhard" type="button" role="tab" aria-controls="ironhard" aria-selected="false">
+						<div class="position-relative btn-clan-inner">
+							<img class="position-absolute" src="https://www.pokexgames.com/static/img/btn_ironhard_element.webp" width="68" height="57" style="top: -12%;" alt="Ironhard Image">
+							<img src="https://www.pokexgames.com/static/img/btn_clan_bg.webp" width="300" height="76" alt="Ironhard">
+							<div class="position-absolute d-flex justify-content-center align-items-center w-100" style="top: 0; height: 85%">
+								<span class="f-lilita text-custom-shadow text-light btn-clan-text">Ironhard</span>
+							</div>
+						</div>
+					</button>
+				</li>
+			</ul>
+
+			<div class="tab-content text-light" id="element-tab-content">      
+				<div class="tab-pane fade active show" id="naturia" role="tabpanel" aria-labelledby="naturia-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img src="https://www.pokexgames.com/static/img/naturia_element.webp" width="353" height="393" alt="Naturia Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Naturia</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/naturia_clan_img.webp" width="1074" height="723" alt="Naturia Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img src="https://www.pokexgames.com/static/img/grass_icon.webp" width="52" height="51" alt="">
+												<img class="ml-2" src="https://www.pokexgames.com/static/img/bug_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="malefic" role="tabpanel" aria-labelledby="malefic-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/malefic_element.webp" width="434" height="384" alt="Malefic Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Malefic</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/malefic_clan_img.webp" width="1074" height="723" alt="Malefic Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper icons-3">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/poison_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/dark_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/ghost_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="wingeon" role="tabpanel" aria-labelledby="wingeon-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/wingeon_element.webp" width="353" height="393" alt="Wingeon Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Wingeon</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/wingeon_clan_img.webp" width="1074" height="723" alt="Wingeon Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/fly_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/dragon_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="raibolt" role="tabpanel" aria-labelledby="raibolt-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/raibolt_element.webp" width="353" height="393" alt="Raibolt Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Raibolt</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/raibolt_clan_img.webp" width="1074" height="723" alt="Raibolt Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper icons-1">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/electric_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="volcanic" role="tabpanel" aria-labelledby="volcanic-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/volcanic_element.webp" width="386" height="403" alt="Volcanic Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Volcanic</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/volcanic_clan_img.webp" width="1074" height="723" alt="Volcanic Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper icons-1">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/fire_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="gardestrike" role="tabpanel" aria-labelledby="gardestrike-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/gardestrike_element.webp" width="352" height="368" alt="Gardestrike Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Gardestrike</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/gardestrike_clan_img.webp" width="1074" height="724" alt="Gardestrike Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/fighting_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/normal_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="orebound" role="tabpanel" aria-labelledby="orebound-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/orebound_element.webp" width="422" height="368" alt="Orebound Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Orebound</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/orebound_clan_img.webp" width="1074" height="723" alt="Orebound Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/rock_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/ground_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="psycraft" role="tabpanel" aria-labelledby="psycraft-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/psycraft_element.webp" width="460" height="368" alt="Psycraft Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Psycraft</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/psycraft_clan_img.webp" width="1074" height="723" alt="Psycraft Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/psychic_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/fairy_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="seavell" role="tabpanel" aria-labelledby="seavell-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/seavell_element.webp" width="370" height="368" alt="Seavell Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Seavell</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/seavell_clan_img.webp" width="1074" height="723" alt="Seavell Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/water_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/ice_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="ironhard" role="tabpanel" aria-labelledby="ironhard-tab">
+					<div class="row row-cols-3 justify-content-center" style="">
+						<div class="col px-0 overflow-hidden" style="width: 100%;">
+							<div class="element-banner-wrapper position-relative">
+								<img class="img-fluid" src="https://www.pokexgames.com/static/img/clan_banner_element.webp" width="643" height="555" alt="Banner Image">
+								<div class="position-absolute" style="top: 3%; left: 14%; height: 93%; width: 72%;">
+									<div class="row row-cols-1 m-0 p-0" style="height: 100%;">
+										<div class="col d-flex justify-content-center align-items-center" style="height: 80%;">
+											<img loading="lazy" src="https://www.pokexgames.com/static/img/ironhard_element.webp" width="321" height="390" alt="Ironhard Image" style="max-width: 100%; height: auto; width: 80%;">
+										</div>
+										<div class="col d-flex justify-content-center align-items-center" style="height: 20%;">
+											<h3 class="f-lilita display-3 text-uppercase text-custom-shadow m-0">Ironhard</h3>
+										</div>
+									</div>
+								</div>
+							</div>              
+						</div>
+						<div class="col-7">
+							<div class="ml-5 clan-img-inner">
+								<div class="d-flex pr-5">
+									<div class="position-relative my-4 p-3 bg-custom-gl-blue b-radius-18px shadow">
+										<img loading="lazy" class="img-fluid" style="border-radius: 17px;" src="https://www.pokexgames.com/static/img/ironhard_clan_img.webp" width="1074" height="723" alt="Ironhard Clan Image">
+										<div class="position-absolute banner-elements-wrapper">
+											<img class="img-fluid" src="https://www.pokexgames.com/static/img/side_clan_banner.webp" width="232" height="142" alt="">
+											<div class="position-absolute elements-icons-wrapper">
+												<img loading="lazy" src="https://www.pokexgames.com/static/img/steel_icon.webp" width="52" height="51" alt="">
+												<img loading="lazy" class="ml-2" src="https://www.pokexgames.com/static/img/crystal_icon.webp" width="52" height="51" alt="">
+											</div>
+										</div>
+									</div>
+								</div>                
+							</div> 
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>    
+	</div>
+-->
+</div>
+<div class="carouselRocket" id="rocket">
+	<div class="carouselRocket__background">
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w1536 2x, https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w768"
+				media="(max-width: 767px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w2048 2x, https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w1024"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w2880 2x, https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w1440"
+				media="(min-width: 1024px) and (max-width: 1339px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w2880 2x, https://lh3.googleusercontent.com/sscJ3XNJlmo_mIF_E_aSXgoVbhj5JNTrZHSuDM6EUAXr-9TWUyVf11zBMpMaABjQbWPVyFbKWCHHmKzEQZIK06HFlrnjNbH7US8xRA8Z5_voXn0=rw-e365-w1440"
+				media="(min-width: 1440px)">
+			<img class="image carouselRocket__background__image" decoding="async" loading="lazy"
+				src="./assets/unnamed(20).jpg" alt="" width="1920" height="596">
+		</picture>
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w1536 2x, https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w768"
+				media="(max-width: 767px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w2048 2x, https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w1024"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w2880 2x, https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w1440"
+				media="(min-width: 1024px) and (max-width: 1339px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w2880 2x, https://lh3.googleusercontent.com/fH4gNEkGUr66Xb4oexiC2kwgcCP6xkBfpNUMX__Jbnj_i8NswrrJjdukVmrgfWOCX9HWmzfb8nYn9GOn3eDnmqyP3yjy2jri8Gw0EW4qGml5NSE=rw-e365-w1440"
+				media="(min-width: 1440px)">
+			<img class="image carouselRocket__background__overlay" decoding="async" loading="lazy"
+				src="./assets/unnamed(21).png" alt="" width="938" height="391">
+		</picture>
+	</div>
+	<div class="carouselRocket__contentWrap grid">
+		<div class="carouselRocket__content">
+			<div class="carouselRocket__content__icon">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40"
+					xml:space="preserve">
+					<path
+						d="M27.5 39.2H40l-7.3-12.7c4.2-2.4 7.1-6.9 7.1-12C39.8 6.9 33.9.7 26.3.7L0 .8v38.5h11.8v-11h9.4l6.3 10.9zM11.8 11.3h11.3c1.7 0 3.4 1.2 3.4 3.1 0 1.9-1.7 3.1-3.4 3.1H11.8v-6.2z"
+						style="fill:#da291c"></path>
+				</svg>
+			</div>
+			<div class="carouselRocket__content__title">Team GO Rocket</div>
+			<div class="carouselRocket__content__body">Team GO Rocket has invaded the world of Pokémon Toxic! Whether
+				you’re working on Special Research or just trying to rescue Shadow Pokémon, you can challenge Team GO Rocket
+				and foil their plans.</div>
+		</div>
+		<div class="carouselRocket__leaders" data-component="RocketCarousel" data-component-mounted="true">
+			<div class="carouselRocket__leaders__carouselButtons">
+				<button class="carouselRocket__leaders__carouselButton carouselRocket__leaders__carouselButton--prev"
+					aria-label="Next" disabled="">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.8 40" style="enable-background:new 0 0 39.8 40"
+						xml:space="preserve">
+						<circle cx="19.9" cy="20" r="15" style="fill:#fff;stroke:#0061af;stroke-miterlimit:10"></circle>
+						<path style="fill:none;stroke:#0061af;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+							d="M22.5 13.3 15.9 20l6.6 6.7"></path>
+					</svg>
+				</button>
+				<button class="carouselRocket__leaders__carouselButton carouselRocket__leaders__carouselButton--next"
+					aria-label="Next">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.8 40" style="enable-background:new 0 0 39.8 40"
+						xml:space="preserve">
+						<circle cx="19.9" cy="20" r="15" style="fill:#fff;stroke:#0061af;stroke-miterlimit:10"></circle>
+						<path style="fill:none;stroke:#0061af;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+							d="M17.3 26.7 24 20l-6.7-6.7"></path>
+					</svg>
+				</button>
+			</div>
+			<div class="carouselRocket__leaders__carousel">
+				<div
+					class="carouselRocket__leaders__carousel__slide carouselRocket__leader carouselRocket__leader--arlo active"
+					data-index="0">
+					<div class="carouselRocket__leader__image">
+						<picture>
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w1536 2x, https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w768"
+								media="(max-width: 767px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w2048 2x, https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w1024"
+								media="(min-width: 768px) and (max-width: 1023px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w2880 2x, https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w1440"
+								media="(min-width: 1024px) and (max-width: 1339px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w2880 2x, https://lh3.googleusercontent.com/zZuI-p4fvjSMvNarg8PrhwMhJqTf7ZmElAt-zGXL8HKJPcdGbvS_TGLptNARQgaxWRVtg3idcLS9FVTbIr-MdmXokFMC-hsQtVXW9hfFln-mGjY=rw-e365-w1440"
+								media="(min-width: 1440px)">
+							<img class="image" decoding="async" loading="lazy" src="./assets/unnamed(22).png" alt="" width="650"
+								height="1666">
+						</picture>
+					</div>
+					<div class="carouselRocket__leader__name">Arlo</div>
+				</div>
+				<div
+					class="carouselRocket__leaders__carousel__slide carouselRocket__leader carouselRocket__leader--cliff after"
+					data-index="1">
+					<div class="carouselRocket__leader__image">
+						<picture>
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w1536 2x, https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w768"
+								media="(max-width: 767px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w2048 2x, https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w1024"
+								media="(min-width: 768px) and (max-width: 1023px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w2880 2x, https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w1440"
+								media="(min-width: 1024px) and (max-width: 1339px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w2880 2x, https://lh3.googleusercontent.com/Q-V4l9favlWr3tg5PzTfzntRZa_V5o0QGCB7rAc7WYcEUEwozGurPu36MBWH2kj6iYrOHJ7CCjaTp2PXeAfWs06d-O_5pxfJMBwWjtJHq-hD2w=rw-e365-w1440"
+								media="(min-width: 1440px)">
+							<img class="image" decoding="async" loading="lazy" src="./assets/unnamed(23).png" alt="" width="1184"
+								height="2476">
+						</picture>
+					</div>
+					<div class="carouselRocket__leader__name">Cliff</div>
+				</div>
+				<div
+					class="carouselRocket__leaders__carousel__slide carouselRocket__leader carouselRocket__leader--sierra after"
+					data-index="2">
+					<div class="carouselRocket__leader__image">
+						<picture>
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w1536 2x, https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w768"
+								media="(max-width: 767px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w2048 2x, https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w1024"
+								media="(min-width: 768px) and (max-width: 1023px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w2880 2x, https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w1440"
+								media="(min-width: 1024px) and (max-width: 1339px)">
+							<source type="image/webp"
+								srcset="https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w2880 2x, https://lh3.googleusercontent.com/_9MpLXyDo6xrl3NfkyEg5MpEeZQjFY30pDpF4fMN2wK2ylPhWwKHFIRTQOfwYTCtpV3ndfGjVDbwTl-hdAyZlstaaYwybsZHuP3yaAUEAggYTw=rw-e365-w1440"
+								media="(min-width: 1440px)">
+							<img class="image" decoding="async" loading="lazy" src="./assets/unnamed(24).png" alt="" width="1178"
+								height="2968">
+						</picture>
+					</div>
+					<div class="carouselRocket__leader__name">Sierra</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="download">
+	<div class="download__background">
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w2880 2x, https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w1440"
+				media="(min-width: 1024px) and (max-width: 1339px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w2880 2x, https://lh3.googleusercontent.com/d3MUt9qnSpEQTo_yOpwf9wefXSrAbGeFT1uo69kPu0piUpx3dt7k99rRpaMZAM3rV-MwVSZe8sGuPHmFKnmwP-2S2jE8KnJnvXo2-MsaMa2B-hI=rw-e365-w1440"
+				media="(min-width: 1440px)">
+			<img class="image laptop-gt" decoding="async" loading="lazy" src="./assets/unnamed(25).jpg" alt=""
+				width="3840" height="838">
+		</picture>
+		<picture>
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/1_dr1gQ1l89xdLq09VAMWLHaUBa-0fHLcDnshewDCIeej70nJUP8caIyq0hat-SMlkxig8ncb7GoDvFiUPWm-OujZG8e6t_8uVcGwyLJMGszig=rw-e365-w1536 2x, https://lh3.googleusercontent.com/1_dr1gQ1l89xdLq09VAMWLHaUBa-0fHLcDnshewDCIeej70nJUP8caIyq0hat-SMlkxig8ncb7GoDvFiUPWm-OujZG8e6t_8uVcGwyLJMGszig=rw-e365-w768"
+				media="(max-width: 767px)">
+			<source type="image/webp"
+				srcset="https://lh3.googleusercontent.com/1_dr1gQ1l89xdLq09VAMWLHaUBa-0fHLcDnshewDCIeej70nJUP8caIyq0hat-SMlkxig8ncb7GoDvFiUPWm-OujZG8e6t_8uVcGwyLJMGszig=rw-e365-w2048 2x, https://lh3.googleusercontent.com/1_dr1gQ1l89xdLq09VAMWLHaUBa-0fHLcDnshewDCIeej70nJUP8caIyq0hat-SMlkxig8ncb7GoDvFiUPWm-OujZG8e6t_8uVcGwyLJMGszig=rw-e365-w1024"
+				media="(min-width: 768px) and (max-width: 1023px)">
+			<img class="image tablet-lt" decoding="async" loading="lazy" src="./assets/unnamed(26).jpg" alt=""
+				width="1170" height="761">
+		</picture>
+	</div>
+	<div class="grid">
+		<div class="download__content">
+			<div class="download__content__logo">
+				<img class="image" decoding="async" loading="lazy" src="./assets/logo_poketoxic.png" alt="Pokémon Toxic"
+					width="1860" height="1190">
+			</div>
+			<div class="download__content__icon">
+				<img class="image" decoding="async" loading="lazy" src="./assets/favicon.png" alt="">
+			</div>
+			<div class="download__content__title">Get more Toxic</div>
+			<div class="download__content__body">Download and Play Today</div>
+			<div class="download__content__appbadges">
+				<a class="button button--white-pill" role="button" href="https://www.mediafire.com/file/9z9ekbq0dqzzvqu/Poke+Toxic+Official.rar/file"
+					aria-label="Download Windows">
+					<span class="button__label">Download Windows</span>
+				</a>
+				<a class="button button--white-pill" role="button" href="https://www.mediafire.com/file/fzs7xbn5fguyita/Poketoxic.apk/file"
+					aria-label="Download Android">
+					<span class="button__label">Download Android</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

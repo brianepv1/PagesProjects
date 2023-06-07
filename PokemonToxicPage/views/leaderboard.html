@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+
+{% block title %}Leaderboard{% endblock %}
+
+{% block content %}
+
+<div class="gblLeaderboard">
+    <div class="gblLeaderboard__bg"></div>
+    <div class="gblLeaderboard__grid">
+        <div class="gblLeaderboard__grid__item">
+            <div class="gblLeaderboard__header">
+                <div class="gblLeaderboard__header__icon">
+                    <img class="image" decoding="async" loading="lazy"
+                        src="https://lh3.googleusercontent.com/T7aoNz66BGLJV_F7zwQJEk3J4uw0klO0UKmo887tXovFih3JG_5bBfji48Zwn5gFtRt20P-ceI-CoIwx3EoX=e365-w72"
+                        alt="" width="36" height="36">
+                </div>
+                <div class="gblLeaderboard__header__title">Pokemon Toxic Leaderboard</div>
+                <div class="gblLeaderboard__header__subtitle">Rankings | Level</div>
+                <div class="gblLeaderboard__header__last-updated">
+                    <span title="2022-11-12T15:51:53.556-08:00">Last updated: Nov 12, 2022, 03:51 PM</span>
+                    <span class="info-icon" tabindex="0"></span>
+                    <div class="info-icon-modal">
+                        <ul>
+                            <li>Rankings are based on yesterday's in-game ratings for Trainers rank 7 and up.
+                            </li>
+                            <li>The leaderboard is scheduled to refresh between approximately 8:00 PM GMT and
+                                10:00 PM GMT every day; however, it may not update due to maintenance or system
+                                issues.</li>
+                            <li>Trainers with active disciplinary action or inappropriate Trainer nicknames will
+                                be excluded without prior notice.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="leaders">
+                <div class="gblLeaderboard__trainers__pages">
+                    <div class="gblLeaderboard__trainers__page gblLeaderboard__trainers__page--active">1</div>
+                </div>
+                <div class="gblLeaderboard__trainers__search"><input type="text"></div>
+                <div class="gblLeaderboard__trainers">
+                    {% if accounts.length == 0 %}
+                    <div>
+                        <h4 style="text-align:center;">Up your level tu be top leader in Pokemon Toxic!</h4>
+                        <div class="newuser__content__button" style="display: flex; justify-content: center;">
+                            <a class="button button--white-pill" role="button" href="/create_character"
+                                aria-label="Pokémon Toxic 101">
+                                <span class="button__label">Create character</span>
+                            </a>
+                        </div>
+                        <div>
+                            {% else %}
+                                {% for account in accounts %}
+                                <div class="gblLeaderboard__trainer gblLeaderboard__trainer--{{trainer.team}}">
+                                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__rank">
+                                        {{ loop.index }}
+                                    </div>
+                                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__details">
+
+                                        <div class="gblLeaderboard__trainer__logo">
+                                            <div class="simple4060__content__icon">
+                                                <img class="image" decoding="async" loading="lazy" src="https://lh3.googleusercontent.com/MxqAAjte5yQsQD0cC73SBVJuH6kX9F-fQ1X97VecyhGHGpixcT1ce7OftVuDufTSVIG_gY233437bOmw1AZFpg1Har4t5sP1jDo4GAX_so38dg=e365-w261" alt="" width="261" height="261">
+                                            </div>
+                                        </div>
+                                        <div class="gblLeaderboard__trainer__details__trainer">
+                                            <div class="gblLeaderboard__trainer__details__trainer__name">
+                                                {{ account['name'] }}
+                                            </div>
+                                            {% if account['online'] == 0 %}
+                                                <div class="gblLeaderboard__trainer__details__trainer__rank">
+                                                    Offline
+                                                </div>
+                                            {% else %}
+                                                <div class="gblLeaderboard__trainer__details__trainer__rank">
+                                                    Online
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="gblLeaderboard__trainer__col gblLeaderboard__trainer__battles">
+                                        <div class="gblLeaderboard__trainer__battles__rating">{{ account['level'] }}
+                                        </div>
+                                        <!-- 
+                                        <div class="gblLeaderboard__trainer__battles__count">Total Battles: 1695
+                                            
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

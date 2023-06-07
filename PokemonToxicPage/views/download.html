@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block title %}Download{% endblock %}
+
+{% block content %}
+<div class="LayoutModules" data-page="light">
+    <div class="module" data-template="TemplateBackgroundContainer" id="blue1">
+        <div class="TemplateBackgroundContainer seasonoflight--blue1 seasonoflight-sunmoon">
+            <div class="TemplateBackgroundContainer__modules">
+                <div class="module" data-template="Spacer">
+                    <div class="Spacer" style="--desktop-size: 60px; --tablet-size: 60px; --mobile-size: 60px;"
+                        role="separator" aria-hidden="true"></div>
+                </div>
+                <div class="module" data-template="TemplateDownloadApp" id="download-app">
+                    <div class="TemplateDownloadApp contained text-white py-0 elevated-dark">
+                        <div class="container container--narrow">
+                            <div class="TemplateDownloadApp__layout">
+                                <div class="TemplateDownloadApp__layout__logo">
+                                    <img class="image" decoding="async" loading="lazy" src="./assets/logo_poketoxic.png"
+                                        alt="Pokémon GO logo" width="1860" height="1190">
+                                </div>
+                                <div class="TemplateDownloadApp__layout__content">
+                                    <div class="TemplateDownloadApp__layout__content__title" role="heading"
+                                        aria-level="3" style="font-size: 28px;">
+                                        Get more Toxic
+                                        <br>Download and Play Today
+                                    </div>
+                                    <div class="TemplateDownloadApp__layout__content__badges">
+                                        <div class="appbadges">
+                                            <div class="appbadges__badge appbadges__badge--apple">
+                                                <a class="button button--white-pill" role="button" href="/https://www.mediafire.com/file/9z9ekbq0dqzzvqu/Poke+Toxic+Official.rar/file"
+                                                    aria-label="Download Windows">
+                                                    <span class="button__label">Download Windows</span>
+                                                </a>
+
+                                            </div>
+                                            <div class="appbadges__badge appbadges__badge--google">
+                                                <a class="button button--white-pill" role="button" href="/https://www.mediafire.com/file/fzs7xbn5fguyita/Poketoxic.apk/file"
+                                                    aria-label="Download Android">
+                                                    <span class="button__label">Download Android</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="module" data-template="Spacer">
+                    <div class="Spacer" style="--desktop-size: 60px;
+        --tablet-size: 60px;
+        --mobile-size: 60px;" role="separator" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="seasonoflight-sun">
+                <img
+                    src="https://lh3.googleusercontent.com/MLZipvpzwA1_cUC_qvyqYhWpK4Ks9aFkr1jQxPjD-9fOTeTZOJuCl4_0GAEbWBHXn-pqLjDDuIVH2EK5kd_kI_Pil-1JxUn_u9axQI-v6ipPww=s0">
+            </div>
+            <div class="seasonoflight-moon">
+                <img
+                    src="https://lh3.googleusercontent.com/uev9peWBZYUk8hBmeshOq0WDsmQt11N2zFRlVjpZWLabs0KFzGR50tugi7CjxvKKr_ydTUhXlp_ilJ92-GargeM7A78VSVVkS_9gFT3nc5bCFg=s0">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

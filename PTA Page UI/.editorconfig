@@ -1,0 +1,15 @@
+# EditorConfig mas informacion: https://EditorConfig.org
+
+# Top del editor
+root = true
+
+# Crea una nueva linea al final de cada archivo
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Configuración para todos los archivos
+[*.{js,pug,styl,json}]
+charset = utf-8
+indent_style = tab
+indent_size = 4

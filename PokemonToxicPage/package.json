@@ -1,0 +1,24 @@
+{
+  "name": "pokemontoxic",
+  "version": "1.0.0",
+  "description": "Pokemon Toxic Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "node-fetch": "2.x",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.20",
+    "nunjucks": "^3.2.3",
+    "request": "^2.88.2",
+    "uuid": "^3.4.0"
+  }
+}

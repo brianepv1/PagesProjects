@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+<div class="headersimple headersimple--hero">
+    <div class="headersimple__content">
+        <div class="headersimple__content__title">EVENTS</div>
+    </div>
+</div>
+<div class="upcomingevents ready" data-component="UpcomingEvents" data-component-mounted="true">
+    <div class="upcomingevents__loading">
+        <div class="loading loading--white">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="upcomingevents__eventsWrap grid">
+        <div class="upcomingevents__events">
+            <!---->
+            <!---->
+            <a class="upcomingevents__event" href="/">
+                <div class="upcomingevents__event__imageAndDate">
+                    <div class="upcomingevents__event__image">
+                        <img src="/assets/navidadToxic.jpeg"
+                            width="5120" height="2880">
+                    </div>
+                    <div class="upcomingevents__event__calendar">
+                        <div class="upcomingevents__event__calendar__day">
+                            <!---->?
+                            <!---->
+                        </div>
+                        <div class="upcomingevents__event__calendar__month">
+                            <!---->Dec
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div class="upcomingevents__event__content">
+                    <div class="upcomingevents__event__title">
+                        <!---->December 2022: Toxic christmas
+                        <!---->
+                    </div>
+                    <div class="upcomingevents__event__body">
+                        <!---->
+                        <!---->
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="upcomingevents__empty">Check back soon for more details.</div>
+</div>
+{% endblock %}

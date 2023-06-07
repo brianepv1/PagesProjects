@@ -1,0 +1,7 @@
+/package-lock.json
+/node_modules/
+/dist/
+/.idea/plantilla-gulp.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml

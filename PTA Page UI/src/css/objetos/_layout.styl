@@ -1,0 +1,274 @@
+//- - - - - - - - - - - - - - - - - - - - - - - -
+//- Elementos del formulario
+//- - - - - - - - - - - - - - - - - - - - - - - -
+.form-list
+	reset-list()
+	display block
+	margin 30px 0 10px -2% !important
+	padding-left 0
+	list-style none
+	font-size 0
+	
+	.form-list
+		margin-top 0 !important
+		margin-bottom 0 !important
+
+	&.full
+		margin-left 0 !important
+		padding 0
+
+		& > li
+			display block
+			margin-left 0
+			width auto
+
+		.hintTip
+			display block
+
+		.currentInput
+			.datepicker
+				width 95% !important
+
+			textarea
+				width 100%
+
+	&.compact
+		> li
+			margin-bottom 8px
+
+	&.four
+		> li
+			width 23%
+
+	&.center
+		text-align center
+
+	&.inline
+		margin-left 0 !important
+
+		> li
+			display inline-block
+			margin-left 20px
+			width auto
+			vertical-align bottom
+
+			&:first-child
+				margin-left 0
+
+	[type=text]
+	[type=password]
+	[type=email]
+		display block
+		width 100%
+		box-sizing border-box
+		
+	> li
+		display inline-block
+		margin 0 0 20px 2%
+		width 48%
+		font-size 14px
+		vertical-align top
+
+		&.full
+			display block
+			width   auto
+
+		&.margin
+			margin-right 50px
+
+		.currentInput
+			&:nth-child(2)
+				margin-top 50px;
+
+		&.doble
+			> .currentInput
+				col(1/2)
+				margin-top:0
+
+.lbRd
+	position relative
+	margin-right 25px
+
+	.flCh
+		position absolute
+		background #fff
+		border 3px solid #fff
+		border-radius 20px
+		box-shadow 0 0 0px 1px black
+		content ''
+		display block
+		height 10px
+		left -20px
+		position absolute
+		top 0
+		width  10px
+
+	:checked
+		& + .flCh
+			background darkgray
+	
+	:disabled
+		& + .flCh
+			box-shadow 0 0 0 1px lightgray
+			border 3px solid lightgray
+			background lightgray
+		
+		&:checked
+			& + .flCh
+				//background-color lightgray
+				background-color lightgray
+
+	&.error
+		& + .flCh
+			box-shadow 0 0 0 1px red
+			border 3px solid lightgray
+			background lightgray
+
+	input
+		&[type=radio]
+			display none
+			&:after,
+			&:before
+				display none
+
+.lbCh
+	position relative
+	margin-right 25px
+
+	.flCh
+		position absolute
+		background #fff
+		border 3px solid #fff
+		border-radius 2px
+		box-shadow 0 0 0 1px black
+		content ''
+		display block
+		height 10px
+		left -20px
+		top 0
+		width  10px
+
+	:checked
+		& + .flCh
+			background darkgray
+	
+	:disabled
+		& + .flCh
+			box-shadow 0 0 0 1px lightgray
+			border 3px solid lightgray
+			background lightgray
+		
+		&:checked
+			& + .flCh
+				//background-color lightgray
+				background-color lightgray
+
+	&.error
+		& + .flCh
+			box-shadow 0 0 0 1px red
+			border 3px solid lightgray
+			background lightgray
+
+	input
+		&[type=checkbox]
+			display none
+			&:after,
+			&:before
+				display none
+
+
+.currentInput
+	display inline-block
+	margin 10px 0
+	position relative
+	width 100%
+
+	.currentInput-label
+		color black
+		display block
+		font-size 0
+		left 0
+		opacity 0
+		position absolute
+		text-align left
+		top -12px
+		width 100%
+		animation hintLabel_hide .5s
+
+	input
+		width 215px
+
+		&[type=checkbox]
+			margin-top 10px
+			width auto
+
+	&.activo,
+	&.listo
+		.currentInput-label
+			display block
+			top -12px
+			font-size 11px
+			opacity 1
+			
+			animation hintLabel .5s
+
+	&.activo
+		.currentInput-label
+			color darkgray
+		
+		input
+			border-bottom-color darkgray
+
+	&.error
+		.currentInput-label
+			color red
+		
+		input
+			border-color red
+
+	.datepicker, .rangeDate
+		display inline-block !important
+		vertical-align bottom !important
+		width 86% !important
+
+//- - - - - - - - - - - - - - - - - - - - - - - -
+//- HINT-TIP
+//- - - - - - - - - - - - - - - - - - - - - - - -
+.hintTip
+	display block
+	position  relative
+	vertical-align  middle
+
+	&.error
+		.hintTip-text
+			display block
+
+		.customSelect
+			margin-bottom 10px
+			border-color red
+			
+			.arrow
+				border-top-color red
+
+		input
+			border-color red
+
+	.customSelect + .hintTip-text
+		margin-top -10px
+	
+	.hintTip-text
+		background white
+		border-radius 0 0 4px 4px
+		border-top 1px solid red
+		box-sizing border-box 
+		color red
+		cursor default
+		display none
+		margin 0 
+		min-width 100%
+		font-size 13px
+		padding 6px 0
+		text-align right
+		top 100%
+		position absolute
+		z-index 2

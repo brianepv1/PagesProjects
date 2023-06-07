@@ -1,0 +1,158 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ content.html_title }}</title>
+    <meta name="description" content="{{ content.meta_description }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <body>
+
+	<section class="templates">
+
+		<div class="programas__tab-content" id="tpl-tabs-content"> </div>
+		<div class="programas__tab-content-item" id="tpl-tabs-content-item">
+			<a href="#!" id="tpl-tabs-content-link">
+				<div class="horario">
+					10:00 AM
+				</div>
+				<div class="titulo">
+					Lorem ipsum dolor sit amet,
+				</div>
+				<div class="contenido">
+				</div>
+			</a>
+		</div>
+
+		<div class="expositores__carrusel-item" id="tpl-carrusel-item">
+			<div class="expositores__carrusel-item-contenedor">
+				<img src="" alt="" />
+				<div>
+					<strong>Martha Gonzales 1</strong>
+					<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore olutpat.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="tpl-banner-first">
+			<div class="banner-vender">
+				<h2>¿Buscas llegar a más clientes?</h2>
+				<strong>Comienza a vender tus productos 100% online de forma rápida y sencilla</strong>
+				<a class="agenda__btn" href="#programas-section">Comenzar a vender</a>
+			</div>
+		</div>
+
+		<div class="container" id="tpl-banner-second">
+			<div class="banner-vender">
+				<h2>Haz crecer tu red de contactos</h2>
+				<strong>Conoce a los más de 20 partners listos para ayudarte a hacer creccer tu emprendimiento.</strong>
+				<a class="agenda__btn"href="#!">Hacer Alianzas Estratégicas</a>
+			</div>
+		</div>
+
+	</section>
+
+    <section class="banner--salas banner--secundario js-internal-room">
+		<div class="container">
+			<h2>Sala 1</h2>
+			<div class="dots-internal-room">
+				<div class="dots">
+					<span class="dot dot-red"></span>
+					<span class="dot dot-grey"></span>
+					<span class="dot dot-yellow"></span>
+					<span class="dot dot-green"></span>
+				</div>
+			</div>
+			<h1>Titulo de la conferencia</h1>
+			<!--
+
+			<div class="internal-iframe">
+				<iframe src='//mdstrm.com/live-stream/61ae2542af405208304fcbd6?autoplay=false' width='640' height='360' allow='autoplay; fullscreen; encrypted-media' frameborder='0' allowfullscreen allowscriptaccess='always' scrolling='no'></iframe>
+			</div>
+			-->
+			<span>EN VIVO</span>
+		</div>
+    </section>
+
+	<section class="expositores expositores--verde">
+		<div class="expositores__container container">
+			<h2>EXPONEN</h2> 
+			<div class="expositores__carrusel" id="carrusel_interno">
+			</div>
+		</div>
+	</section>
+
+    <section class="" id="js-banner-ventas">		
+		
+	</section>
+	
+
+	<section class="programas" id="programas-section">
+		<div class="container">
+			<div class="programas__titulo">
+				<h2>¡No te vayas!</h2>
+				<strong>Encuentra más eventos inspiradores que te ayudarán a hacer crecer tu Pyme aquí:</strong>
+			</div>
+			<div class="programas__tab js-filtro-interno">
+				<h3>PROGRAMA</h3>
+				<ul class="programas__tab-select js-programas-tabs">
+					<li class="is-active" id="day1" data-date="2021-12-10">
+						<a href="#!" > Viernes 10 diciembre </a> 
+					</li>
+					<li id="day2" data-date="2021-12-11">
+						<a href="#!"> Sabado 11 diciembre </a>
+					</li>
+				</ul>
+
+			</div>
+			<div class="programas__horarios">
+				<p>VER OTROS HORARIOS</p>
+				<div class="programas__paginador">
+					<a href="#!" id="js-prev-arrow" data-rel="0">
+						<span class="red-arrow-prev"></span>
+					</a>
+					<a href="#!" id="js-next-arrow" data-rel="1">
+						<span class="red-arrow-next"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="comunidad-pyme">
+		<div class="container comunidad-pyme__contenedor">
+			<div class="comunidad-pyme__titulo">
+				<h2> Sé parte de la comunidad que sí le da <br>Valor a las Pymes de Chile</h2>
+				<strong>Comprobado por más de 90 mil Pymes ¿Te vas a quedar afuera?</strong>
+			</div>
+			<div class="comunidad-pyme__formulario">
+				<!--[if lte IE 8]>
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				<![endif]-->
+				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				<script>
+					hbspt.forms.create({
+						region: "na1",
+						portalId: "7800319",
+						formId: "c5d65cd5-5fd1-47fe-b96f-2e89fefe688a"
+					});
+				</script>
+			</div>
+		</div>
+	</section>
+    
+  </body>
+  <script type="text/javascript" src="JS/main2.js"> </script>
+
+</html>

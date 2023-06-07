@@ -1,0 +1,79 @@
+.ui-datepicker
+	background lightgray
+	min-width:220px
+	z-index 13 !important
+
+	.ui-datepicker-title
+		box-sizing:border-box
+		background gray
+		color white
+		height:48px
+		padding:15px 0
+		text-align:center
+
+	.ui-datepicker-header
+		.ui-corner-all
+			background black
+			font-size:0
+			height:48px
+			position:absolute
+			width 25px
+			&:hover
+				background darkgray
+
+		.ui-datepicker-next
+			background black
+			position relative
+			right 0
+
+			&:after
+				content '>'
+				position absolute
+				display block
+				top 0
+				left 0
+
+			&:hover
+				background-color darkgray
+
+		.ui-datepicker-prev
+			background black
+			position relative
+			right 0
+
+			&:after
+				content '<'
+				position absolute
+				display block
+				top 0
+				left 0
+
+			&:hover
+				background-color darkgray
+
+	.ui-datepicker-calendar
+		margin:10px auto
+		width:90%
+
+		th
+			color black
+			font-weight 500
+
+		td
+			min-width:20px
+			padding:5px 0
+			text-align:center
+
+			a
+				color black
+				font-size:14px
+				width:20px
+
+				&:hover
+					color:darkgray
+
+.ui-datepicker-year
+	background transparent
+	border none
+	color white
+	font-weight 300

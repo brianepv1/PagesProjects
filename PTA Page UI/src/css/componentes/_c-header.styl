@@ -1,0 +1,61 @@
+.c-header
+    position relative
+    z-index 1
+    background-color transparent 
+    &__container
+        display flex
+        border-bottom line-light-grey
+        position relative
+    &__logo
+        display flex
+        justify-content center
+        img
+            width 100%
+            max-width 250px
+    &__links
+        display none
+        &.isActive
+            display block
+            position absolute
+            bottom 0
+            width 100%
+            list-style none
+    &__logo
+        width 60% 
+    &__icon-mobile
+        display flex
+        justify-content center
+        width 40%
+        border-left line-light-grey
+        &-container
+            display flex
+            justify-content center
+            align-items center
+            position relative
+            flex-direction column
+            width 100%
+            height 100%
+            text-align center
+        &-bullet-1,
+        &-bullet-2
+            width 30px
+            height 30px
+            &:after,
+            &:before
+                position absolute
+                content '\00b7'
+                font-size 60px
+                width 30px
+                height 30px
+                color white
+                z-index 1
+            &:after
+                left 55%
+            &:before
+                right 45%
+        &-bullet-1
+            &:before
+                color purple-rose-bullet
+        &-bullet-2
+            &:after
+                color orange-bullet

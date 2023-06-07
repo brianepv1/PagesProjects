@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="blogPost">
+    <div class="blogPost__grid grid">
+        <div class="blogPost__grid__content">
+
+            <div class="login">
+                <div class="blogPost__header" style="justify-content: center; padding-top: 24px;">
+                    <div class="blogPost__header__icon">
+                        <img src="/assets/favicon.png" alt="Pokémon Toxic">
+                    </div>
+                    <a class="blogPost__header__title" href="/register">Register New Account</a>
+                </div>
+
+                <div class="links">
+                    <a href="/login" >Login</a>
+                    <a href="/register" class="active">Register</a>
+                </div>
+
+                <form class="ajax-form" action="" method="post" autocomplete="off">
+
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                    </label>
+                    <input type="text" name="username" placeholder="Username" id="username" required>
+
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                    </label>
+                    <input type="password" name="password" placeholder="Password" id="password" required>
+
+                    <label for="cpassword">
+                        <i class="fas fa-lock"></i>
+                    </label>
+                    <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword"
+                        required>
+
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                    </label>
+                    <input type="email" name="email" placeholder="Email" id="email" required>
+
+                    <input type="hidden" name="token" value="{{ token }}">
+
+                    {% if settings['recaptcha'] == 'true' %}
+                    <div class="g-recaptcha" data-sitekey="{{ settings['recaptcha_site_key'] }}"></div>
+                    {% endif %}
+
+                    <div class="msg" style="color:red;">{{ msg }}</div>
+
+                    <input type="submit" value="Register">
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

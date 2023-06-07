@@ -1,0 +1,174 @@
+html
+	font-family tipografia-principal
+
+label
+	[type=checkbox],
+	[type=radio]
+		display inline-block
+		margin-right 14px
+
+h1
+	font regular font-size-h1/line-height-h1 tipografia-principal
+
+h2
+	font regular font-size-h2/line-height-h2 tipografia-principal
+
+h3
+	font regular font-size-h3/line-height-h3 tipografia-principal
+
+h4
+	font regular font-size-h4/line-height-h4 tipografia-principal
+
+h5
+	font regular font-size-h5/line-height-h5 tipografia-principal
+
+h6
+	font regular font-size-h6/line-height-h6 tipografia-principal
+
+p, li
+	font regular font-size-p/line-height-p tipografia-principal
+
+a
+	color color-principal
+	font regular font-size-a/line-height-a tipografia-principal
+	text-decoration none
+	transition 0.5s all ease
+
+	&:hover
+		color color-secundario
+
+hr
+	clear both
+	border 0
+	border-top 1px solid color-principal
+	border-radius 0
+	margin 30px 0
+
+fieldset
+	margin 60px 0 0 0
+	padding 0
+	border none
+
+	&:first-child
+		margin-top 0
+
+input
+	outline  none
+
+	&[type=text],
+	&[type=password],
+	&[type=email]
+		color negro
+		background transparent
+		border 0
+		border-bottom 1px solid negro
+		box-sizing border-box
+		font-size font-size-p
+		vertical-align middle
+		padding 10px 0
+
+		&:focus
+			color gray
+
+		&.error
+			border-color red
+			color red
+
+		&.disabled
+		&:disabled
+			color negro
+			-webkit-text-fill-color negro
+			border-bottom 1px dashed negro
+
+		&.full
+			width:100%
+
+		&.small
+			width:100px
+
+		&.mini
+			width 50px
+
+	&[type=radio]
+		position relative
+		margin-right 6px
+
+		&:after
+			background blanco
+			border 3px solid blanco
+			border-radius 20px
+			box-shadow 0 0 0 1px negro
+			content ''
+			display block
+			height 10px
+			left -2px
+			position absolute
+			top -2px
+			width  10px
+
+		&:checked
+			&:after
+				background-color darkgray
+
+		&:disabled
+			&:after
+				box-shadow 0 0 0 1px lightgray
+				border 3px solid lightgray
+				background lightgray
+
+			&:checked
+				&:after
+					background-color lightgray
+
+		&.error
+			&:after
+				box-shadow 0 0 0 1px red
+				border 3px solid lightgray
+				background lightgray
+
+	&[type=checkbox]
+		@extend input[type=radio]
+
+		&:after
+			border-radius 2px
+
+		&:checked
+			&:after
+				background darkgray
+
+		&:disabled
+			&:checked
+				&:after
+					background-color lightgray
+
+	&.noLabel
+		margin-bottom 10px
+
+	&:focus
+		& + label
+			opacity 1
+			top 0
+
+textarea
+	@extend input[type=text]
+	padding 10px 10px
+	width:100%
+	height 4em
+	outline none
+	vertical-align bottom
+	box-sizing border-box
+	background lightgray
+	border none
+	margin-top 2px
+
+	&.lineal
+		height 15px
+		resize none
+
+	&.medio
+		height 65px
+		resize none
+
+	&.full
+		height 130px
+		resize none

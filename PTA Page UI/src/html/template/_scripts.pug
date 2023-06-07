@@ -1,0 +1,95 @@
+//- - - - - - - - - -
+//- Javascript
+//- - - - - - - - - -
+- current_profile = CONST_DEV_PROFILE
+- var urlFolder  = ''
+- var indice = page.link
+
+- if (process.title === 'gulp produccion')
+	- if(indice !== 'index.html')
+		script(src="../js/main.min.js")
+
+	- else
+		script(src="js/main.min.js")
+- else
+	- if(indice !== 'index.html')
+		- urlFolder = '../'
+		// build:js ../js/main.min.js
+	- else
+		//build:js js/main.min.js
+
+	script(src=urlFolder+"js/global/jquery.js")
+
+	- var section_scripts = {}
+
+	- section_scripts['dev']	= ['js/global/jquery.js']
+	- section_scripts['prod']	= ['js/global/jquery.min.js']
+
+	//- libs
+	- var libs			= page.libs
+	- var libs_scripts 	= {}
+
+	- libs_scripts['dev']	= []
+	- libs_scripts['prod']	= []
+
+	if(libs.length > 0)
+		- for(var i = 0; i < libs.length; i++)
+			- libs_scripts['dev'].push('js/libs/'+page.libs[i]+'.js')
+			- libs_scripts['prod'].push('js/libs/'+page.libs[i]+'.min.js')
+
+	if libs_scripts
+		- var total_plugins = libs_scripts[current_profile].length
+		- for(var i = 0; i < total_plugins; i++)
+			script(src=urlFolder+libs_scripts[current_profile][i])
+
+	//- PLUGINS
+	- var plugins			= page.plugins
+	- var plugins_scripts 	= {}
+
+	- plugins_scripts['dev']	= []
+	- plugins_scripts['prod']	= []
+
+	if(plugins.length > 0)
+		- for(var i = 0; i < plugins.length; i++)
+			- plugins_scripts['dev'].push('js/plugins/'+page.plugins[i]+'.js')
+			- plugins_scripts['prod'].push('js/plugins/'+page.plugins[i]+'.min.js')
+
+	if plugins_scripts
+		- var total_plugins = plugins_scripts[current_profile].length
+		- for(var i = 0; i < total_plugins; i++)
+			script(src=urlFolder+plugins_scripts[current_profile][i])
+
+	//- MI SCRIPT GLOBAL
+	- var globals			= site.globals
+	- var global_scripts	= {}
+
+	- global_scripts['dev']		= []
+	- global_scripts['prod']	= []
+
+	if(globals.length > 0)
+		- for(var i = 0; i < globals.length; i++)
+			- global_scripts['dev'].push('js/'+site.globals[i]+'.js')
+			- global_scripts['prod'].push('js/'+site.globals[i]+'.min.js')
+
+	if global_scripts
+		- var total_globals = global_scripts[current_profile].length
+		- for(var i = 0; i < total_globals; i++)
+			script(src=urlFolder+global_scripts[current_profile][i])
+
+	//- CONTROLADORES
+	- var controllers			= page.js
+	- var controllers_scripts	= {}
+
+	- controllers_scripts['dev']	= []
+	- controllers_scripts['prod']	= []
+
+	if(controllers.length > 0)
+		- for(var i = 0; i < controllers.length; i++)
+			- controllers_scripts['dev'].push('js/controllers/'+page.js[i]+'.js')
+			- controllers_scripts['prod'].push('js/controllers/'+page.js[i]+'.min.js')
+
+	if controllers_scripts
+		- var total_controllers = controllers_scripts[current_profile].length
+		- for(var i = 0; i < total_controllers; i++)
+			script(src=urlFolder+controllers_scripts[current_profile][i])
+	// endbuild

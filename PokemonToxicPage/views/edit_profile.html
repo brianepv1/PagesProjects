@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block title %}Edit profile{% endblock %}
+
+{% block content %}
+
+<div class="blogPost">
+    <div class="blogPost__grid grid">
+        <div class="blogPost__grid__content">
+            <div class="blogPost__header">
+                <h2>Edit your information</h2>
+                <div class="blogPost__header__icon">
+                    <img src="/assets/favicon.png" alt="Pokémon Toxic">
+                </div>
+                <p class="blogPost__header__title"></p>
+            </div>
+
+            <div class="blogPost__post__blocks">
+                <div class="block block--ContainerBlock">
+                    <div class="ContainerBlock" style="--background: #02445a;--textColor: #fff">
+                        <div class="ContainerBlock__body">
+                            <h1>Profile</h1>
+                        </div>
+                        <div class="ContainerBlock__blocks">
+                            <div class="block block--ContainerBlock">
+                                <div class="ContainerBlock" style="--background: #9d8e67;--textColor: #fff">
+                                    <h2 class="ContainerBlock__headline">
+                                        <span class="ContainerBlock__headline__title">Your account details are
+                                            below</span>
+                                    </h2>
+                                    <div class="ContainerBlock__body">
+                                        <form action="" method="post" class="ContainerBlock__form">
+
+                                            <label for="username">Username</label>
+                                            <input class="ContainerBlock__form__input" type="text"
+                                                value="{{ account.name }}" name="username" id="username"
+                                                placeholder="Username">
+
+                                            <label for="password">New Password</label>
+                                            <input class="ContainerBlock__form__input" type="password" name="password"
+                                                id="password" placeholder="New Password">
+
+                                            <label for="cpassword">Confirm Password</label>
+                                            <input class="ContainerBlock__form__input" type="password" name="cpassword"
+                                                id="cpassword" placeholder="Confirm Password">
+
+                                            <label for="email">Email</label>
+                                            <input class="ContainerBlock__form__input" type="email"
+                                                value="{{ account.email }}" name="email" id="email" placeholder="Email">
+
+                                            <input class="button button--white-pill" type="submit" value="Save"
+                                                name="save">
+
+                                            <p>{{ msg }}</p>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,96 @@
+.container
+	margin 0 auto
+	max-width container-width
+	padding 0 20px
+
+.row
+	margin 0 auto
+
+	&:after
+		clear both
+		content ''
+		display table
+
+.middle
+	float none !important
+	margin 0 auto
+
+.col-12
+	float left
+	width 100%
+
+.col-11
+	float left
+	width 91.66666667%
+
+.col-10
+	float left
+	width 83.33333333%
+
+.col-9
+	float left
+	width 75%
+
+.col-8
+	float left
+	width 66.66666667%
+
+.col-7
+	float left
+	width 58.33333333%
+
+.col-6
+	float left
+	width 50%
+
+.col-5
+	float left
+	width 41.66666667%
+
+.col-4
+	float left
+	width 33.33333333%
+
+.col-3
+	float left
+	width 25%
+
+.col-2
+	float left
+	width 16.66666667%
+
+.col-1
+	float left
+	width 8.33333333%
+
+.block
+	overflow hidden
+
+	.b-full
+		stack()
+
+	.b-half
+		col(1/2)
+
+	.b-2of3
+		col(2/3)
+
+	.b-1of3
+		col(1/3)
+
+	.b-1of4
+		col(1/4)
+
+@media (max-width: 780px)
+	.block
+		.b-1of4
+			col(1/2, cycle:2)
+
+@media (max-width: 560px)
+	.block
+		.b-full,
+		.b-half,
+		.b-2of3,
+		.b-1of3,
+		.b-1of4
+			stack()

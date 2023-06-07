@@ -1,0 +1,22 @@
+extends ../template/_template
+
+append configuracion
+	-var page = {}
+	-page['link'] = 'ejemplo.html'
+	-page['title'] = 'Ejemplo'
+	-page['descrip'] = 'description'
+	-page['keys'] = 'keywords'
+	-page['lang'] = 'es'
+	-page['responsive'] = true
+	-page['section'] = []
+	-page['libsCss'] = []
+	-page['libs'] = ['_alert', '_customForm', '_fillViews', '_select', '_validate']
+	-page['plugins'] = []
+	-page['js'] = ['home']
+
+	- var path = ''
+	if(page.link !== 'index.html')
+		- path = '../'
+
+block contenido
+	h1 Pagina de ejemplo
